@@ -1,16 +1,23 @@
-:root{
+:root{padding: 0;
     --bg-color: #F7F7F7;
     --fist: #fff;
     --second: #323232;
     --third: #FEF200;
     --fourth: #d5d5d5;
-
 }
 
 body {
 	font-family: iranyekan;
     overflow-x: hidden;
     background: var(--bg-color);
+}
+
+ul{
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
 }
 
 /* header navbar styles */
@@ -30,9 +37,13 @@ body {
 
 /* second row styles */
 
+/* header logo column styles */
+
 .logo-box{
     margin: 0 0 20px 0;
 }
+
+/* header search box column styles */
 
 .search-box__form{
     background: var(--second);
@@ -55,6 +66,8 @@ body {
 .search-box__form__text:focus{
     outline: none;
 }
+
+/* header icons box column styles */
 
 .icons-box{
     display: flex;
@@ -107,26 +120,27 @@ body {
 }
 
 .menu__box{
-    padding: 0;
-    margin: 8px 0;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin-bottom: 0;
 }
 
 .menu__box__items{
     position: relative;
+    padding: 10px 0;
 }
 
 .menu__box__items__link{
     color: var(--fourth);
-    text-decoration: none;
     transition: all 0.7s;
 }
 
 .menu__box__items__link:hover{
     color: var(--third);
 }
+
+/* dropdown menu */
 
 .menu__box__items__link--dot::before{
     content: "";
@@ -138,13 +152,49 @@ body {
     border-radius: 50%;
     background-color: #707070;
 }
-.menu__box__items__link--drop-down::after{
+
+.menu__box__items__link--dropdown::after{
     content: "▾";
     position: absolute;
-    top: 2px;
-    left: -14px;
+    top: 13px;
+    left: -15px;
     margin-right: 4px;
     font-weight: 400;
     font-style: normal;
     font-size: 1.1rem;
+}
+
+.dropdown-menu__box{
+    visibility: hidden;
+    position: absolute;
+    top: 46px;
+    left: -54px;
+    background: var(--second);
+    border-radius: 1px 0px 4px 4px;
+    opacity: 0;
+    transform: translateX(25px);
+    transition: all 0.4s;
+}
+
+.menu__box__items--headphone:hover .dropdown-menu__box{
+    visibility: visible;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.menu__box__items--speaker:hover .dropdown-menu__box{
+    visibility: visible;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.dropdown-menu__box__item--link{
+    color: var(--fourth);
+    font-size: 0.9rem;
+    transition: color 0.8s;
+    margin: 6px 0px 6px 83px;
+}
+
+.dropdown-menu__box__item:hover .dropdown-menu__box__item--link{
+    color: var(--third);
 }
