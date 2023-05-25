@@ -188,30 +188,46 @@
 
             <form class="sideNav__login__form">
                 <div class="sideNav__login__form__username">
-                    <label class="sideNav__login__form__label--mb">
+                    <label class="sideNav__login__form__label--mb" for="login-username">
                         نام کاربری یا ایمیل
                         <span class="required">*</span>
                     </label>
-                    <input type="text" class="sideNav__login__form__input">
+                    <input id="login-username" type="text" class="sideNav__login__form__input">
                 </div>
                 <div class="sideNav__login__form__password">
-                    <label class="sideNav__login__form__label--mb">
+                    <label class="sideNav__login__form__label--mb" for="login-password">
                         گذرواژه
                         <span class="required">*</span>
                     </label>
-                    <input type="password" class="sideNav__login__form__input">
+                    <input id="login-password" type="password" class="sideNav__login__form__input">
                 </div>
                 <div class="sideNav__login__form__extraItems">
                     <div class="sideNav__login__form__rememberUser">
-                        <input type="checkbox" name="" id="">
-                        <span> مرا به خاطر بسپار</span>    
+                        <input type="checkbox" name="" id="login-rememberUser">
+                        <label for="login-rememberUser"> مرا به خاطر بسپار</label>    
                     </div>
                     <a  class="sideNav__login__form__forgettingPass" href="">گذرواژه خود را فراموش کرده اید؟</a>
+                </div>
+                <div class="sideNav__login__form__submit">
+                    <button type="submit" class="sideNav__login__form__submit--style">ورود
+                    </button>
+                </div>
+
+                <div class="sideNav__login__form__create-account">
+                    <div class="sideNav__login__form__create-account__icon">
+                        <svg width="130px" height="130px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#f1f1f1">
+                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"></path>
+                        </svg>
+                    </div>
+                    <p class="sideNav__login__form__create-account__question">هنوز حساب کاربری ندارید؟</p>
+                    <a href=""  class="sideNav__login__form__create-account__link">ایجاد حساب کاربری</a>
                 </div>
             </form>
         </div>
     </nav>
 
 <div class="layer"></div>
+
+<script src="./assets/JS/home.js"></script>
 </body>
 </html>
