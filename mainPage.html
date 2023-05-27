@@ -232,8 +232,8 @@
 
     <nav class="sideNav__cart">
         <div class="sideNav__container">
-            <div class="sideNav__cart__heading">
-                <span class="sideNav__cart__heading__titel">سبد خرید</span>
+            <div class="sideNav__cart__header">
+                <span class="sideNav__cart__header__titel">سبد خرید</span>
                 <a href="#" id="close-cart-nav">
                     <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.293 5.293a1 1 0 0 1 1.414 0L12 10.586l5.293-5.293a1 1 0 1 1 1.414 1.414L13.414 12l5.293 5.293a1 1 0 0 1-1.414 1.414L12 13.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L10.586 12 5.293 6.707a1 1 0 0 1 0-1.414z" fill="#0D0D0D"/>
@@ -241,7 +241,7 @@
                 </a>
             </div>
 
-            <!-- Empty shopping cart warning -->
+            <!-- Notification of empty cart (side navigation) -->
 
             <!-- <div class="sideNav__cart__empty-cart">
                 <div>
@@ -262,8 +262,27 @@
                 </a>
             </div> -->
 
+            <!-- Side cart list -->
 
+            <div class="sideNav__cart__footer">
+                <ul class="sideNav__cart__list">
 
+                </ul>
+                <div class="sideNav__cart__list__info">
+                    <div class="sideNav__cart__list__total-price">
+                        <strong>جمع كل سبد خريد:</strong>
+                        <span>
+                            <bdi>2,599,000&nbsp;
+                                <span class="">تومان</span>
+                            </bdi>
+                        </span>
+                    </div>
+                    <div class="sideNav__cart__list__btn">
+                        <a class="sideNav__cart__list__view-cart sideNav__cart__list__btn--style" href="">مشاهده سبد خرید</a>
+                        <a class="sideNav__cart__list__checkout sideNav__cart__list__btn--style" href="">تسویه حساب</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
 
