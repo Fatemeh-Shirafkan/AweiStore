@@ -204,7 +204,7 @@ input:focus{
     color: var(--third);
 }
 
-/* Side navigation login styles */
+/* Side login navigation styles */
 
 .sideNav__login{
     height: 100vh;
@@ -216,15 +216,15 @@ input:focus{
     z-index: 500;
     overflow: hidden;
     overflow-y: auto;
-    transform: translateX(100%); 
-    transition: all cubic-bezier(0.18, 0.89, 0.32, 1.28) 600ms;
+    transform: translate3d(100%,0,0);
+    transition: transform .5s cubic-bezier(.19,1,.22,1);
 }
 
 .sideNav__login.open__sideNav__login{
-    transform: translateX(0); 
+    transform: none; 
 }
 
-.sideNav__login__container{
+.sideNav__container{
     padding: 0 25px 30px 25px;
 }
 
@@ -333,9 +333,88 @@ input:focus{
     background: var(--hover);
 }
 
+/* Side login cart styles */
+
+.sideNav__cart{
+    height: 100vh;
+    width: 350px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--fist);
+    z-index: 500;
+    overflow: hidden;
+    overflow-y: auto;
+    transform: translate3d(-100%,0,0);
+    transition: transform .5s cubic-bezier(.19,1,.22,1);
+}
+
+.sideNav__cart.open__sideNav__cart{
+    transform: none; 
+}
+
+.sideNav__cart__heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0 25px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(119, 119, 119, 0.2);
+    margin-bottom: 15px;
+
+}
+
+/* Empty shopping cart warning */
+
+.sideNav__cart__empty-cart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    padding-bottom: 20px;
+}
+
+.sideNav__cart__empty-cart__alert{
+    font-weight: 700;
+}
+
+.sideNav__cart__empty-cart__shop-link{
+    background: var(--third);
+    color: var(--fist);
+    font-size: 0.85rem;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: 800;
+    transition: all 0.6s;
+}
+
+.sideNav__cart__empty-cart__shop-link:hover{
+    background: var(--hover);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Blure dark layer styles */
 
-.sideNav__login__layer{
+.sideNav__layer{
     position: fixed;
     top: 0;
     bottom: 0;
@@ -349,7 +428,7 @@ input:focus{
     transition: opacity .5s cubic-bezier(.19,1,.22,1),visibility 0s cubic-bezier(.19,1,.22,1) .5s,z-index 0s cubic-bezier(.19,1,.22,1) .5s,top 0s cubic-bezier(.19,1,.22,1) .5s;
 }
 
-.sideNav__login__layer.sideNav__login__layer--active{
+.sideNav__layer.sideNav__layer--active{
     visibility: visible;
     opacity: 1;
     transition-delay: 0s;
