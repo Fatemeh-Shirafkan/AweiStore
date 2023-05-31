@@ -176,97 +176,97 @@
     <!-- Side login navigation  -->
 
     <nav class="sideNav__login" >
-        <div class="sideNav__container">
-            <div class="sideNav__login__heading">
-                <span class="sideNav__login__heading__titel">ورود</span>
-                <a href="#" id="close-login-nav">
-                    <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.293 5.293a1 1 0 0 1 1.414 0L12 10.586l5.293-5.293a1 1 0 1 1 1.414 1.414L13.414 12l5.293 5.293a1 1 0 0 1-1.414 1.414L12 13.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L10.586 12 5.293 6.707a1 1 0 0 1 0-1.414z" fill="#0D0D0D"/>
-                    </svg>
-                </a>
+        <div class="sideNav__login__heading">
+            <span class="sideNav__login__heading__titel">ورود</span>
+            <a href="#" id="close-login-nav">
+                <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.293 5.293a1 1 0 0 1 1.414 0L12 10.586l5.293-5.293a1 1 0 1 1 1.414 1.414L13.414 12l5.293 5.293a1 1 0 0 1-1.414 1.414L12 13.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L10.586 12 5.293 6.707a1 1 0 0 1 0-1.414z" fill="#0D0D0D"/>
+                </svg>
+            </a>
+        </div>
+
+        <form class="sideNav__login__form">
+            <div class="sideNav__login__form__username">
+                <label class="sideNav__login__form__label--mb" for="login-username">
+                    نام کاربری یا ایمیل
+                    <span class="required">*</span>
+                </label>
+                <input id="login-username" type="text" class="sideNav__login__form__input">
+            </div>
+            <div class="sideNav__login__form__password">
+                <label class="sideNav__login__form__label--mb" for="login-password">
+                    گذرواژه
+                    <span class="required">*</span>
+                </label>
+                <input id="login-password" type="password" class="sideNav__login__form__input">
+            </div>
+            <div class="sideNav__login__form__extraItems">
+                <div class="sideNav__login__form__rememberUser">
+                    <input type="checkbox" name="" id="login-rememberUser">
+                    <label for="login-rememberUser"> مرا به خاطر بسپار</label>    
+                </div>
+                <a  class="sideNav__login__form__forgettingPass" href="">گذرواژه خود را فراموش کرده اید؟</a>
+            </div>
+            <div class="sideNav__login__form__submit">
+                <button type="submit" class="sideNav__login__form__submit--style">ورود
+                </button>
             </div>
 
-            <form class="sideNav__login__form">
-                <div class="sideNav__login__form__username">
-                    <label class="sideNav__login__form__label--mb" for="login-username">
-                        نام کاربری یا ایمیل
-                        <span class="required">*</span>
-                    </label>
-                    <input id="login-username" type="text" class="sideNav__login__form__input">
+            <div class="sideNav__login__form__create-account">
+                <div>
+                    <svg width="130px" height="130px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#f1f1f1">
+                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"></path>
+                    </svg>
                 </div>
-                <div class="sideNav__login__form__password">
-                    <label class="sideNav__login__form__label--mb" for="login-password">
-                        گذرواژه
-                        <span class="required">*</span>
-                    </label>
-                    <input id="login-password" type="password" class="sideNav__login__form__input">
-                </div>
-                <div class="sideNav__login__form__extraItems">
-                    <div class="sideNav__login__form__rememberUser">
-                        <input type="checkbox" name="" id="login-rememberUser">
-                        <label for="login-rememberUser"> مرا به خاطر بسپار</label>    
-                    </div>
-                    <a  class="sideNav__login__form__forgettingPass" href="">گذرواژه خود را فراموش کرده اید؟</a>
-                </div>
-                <div class="sideNav__login__form__submit">
-                    <button type="submit" class="sideNav__login__form__submit--style">ورود
-                    </button>
-                </div>
-
-                <div class="sideNav__login__form__create-account">
-                    <div>
-                        <svg width="130px" height="130px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#f1f1f1">
-                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"></path>
-                        </svg>
-                    </div>
-                    <p class="sideNav__login__form__create-account__question">هنوز حساب کاربری ندارید؟
-                    </p>
-                    <a href=""  class="sideNav__login__form__create-account__link">ایجاد حساب کاربری
-                    </a>
-                </div>
-            </form>
-        </div>
+                <p class="sideNav__login__form__create-account__question">هنوز حساب کاربری ندارید؟
+                </p>
+                <a href=""  class="sideNav__login__form__create-account__link">ایجاد حساب کاربری
+                </a>
+            </div>
+        </form>
     </nav>
 
     <!-- Side cart navigation  -->
 
     <nav class="sideNav__cart">
-        <div class="sideNav__container">
-            <div class="sideNav__cart__header">
-                <span class="sideNav__cart__header__titel">سبد خرید</span>
-                <a href="#" id="close-cart-nav">
-                    <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.293 5.293a1 1 0 0 1 1.414 0L12 10.586l5.293-5.293a1 1 0 1 1 1.414 1.414L13.414 12l5.293 5.293a1 1 0 0 1-1.414 1.414L12 13.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L10.586 12 5.293 6.707a1 1 0 0 1 0-1.414z" fill="#0D0D0D"/>
-                    </svg>
-                </a>
+        <div class="sideNav__cart__header">
+            <span class="sideNav__cart__header__titel">سبد خرید</span>
+            <a href="#" id="close-cart-nav">
+                <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.293 5.293a1 1 0 0 1 1.414 0L12 10.586l5.293-5.293a1 1 0 1 1 1.414 1.414L13.414 12l5.293 5.293a1 1 0 0 1-1.414 1.414L12 13.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L10.586 12 5.293 6.707a1 1 0 0 1 0-1.414z" fill="#0D0D0D"/>
+                </svg>
+            </a>
+        </div>
+
+       <!-- Notification of empty cart (side navigation) -->
+
+        <!-- <div class="sideNav__cart__empty-cart">
+            <div>
+                <svg width="130px" height="130px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve" fill="#f1f1f1">
+                <circle style="fill:none;stroke:#f1f1f1;stroke-width:2;stroke-miterlimit:10;" cx="22" cy="24" r="2"/>
+                <circle style="fill:none;stroke:#f1f1f1;stroke-width:2;stroke-miterlimit:10;" cx="13" cy="24" r="2"/>
+                <path d="M25.658,10l-2.422,9H10.781L8.159,8.515C7.937,7.625,7.137,7,6.219,7H4C3.448,7,3,7.448,3,8c0,0.552,0.448,1,1,1h2.219
+                l2.621,10.485C9.063,20.375,9.863,21,10.781,21h12.455c0.902,0,1.692-0.604,1.93-1.474L27.764,10H25.658z"/>
+                <line style="fill:none;stroke:#f1f1f1;stroke-width:2;stroke-miterlimit:10;" x1="17" y1="7" x2="17" y2="15"/>
+                <line style="fill:none;stroke:#f1f1f1;stroke-width:2;stroke-miterlimit:10;" x1="21" y1="11" x2="13" y2="11"/>
+                </svg>
             </div>
+            <p class="sideNav__cart__empty-cart__alert">
+                هیچ محصولی در سبد خرید نیست.
+            </p>
+            <a href="" class="sideNav__cart__empty-cart__shop-link">
+                بازگشت به فروشگاه
+            </a>
+        </div> -->
 
-            <!-- Notification of empty cart (side navigation) -->
+        <!-- Side cart list -->
 
-            <!-- <div class="sideNav__cart__empty-cart">
-                <div>
-                    <svg width="130px" height="130px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve" fill="#f1f1f1">
-                    <circle style="fill:none;stroke:#f1f1f1;stroke-width:2;stroke-miterlimit:10;" cx="22" cy="24" r="2"/>
-                    <circle style="fill:none;stroke:#f1f1f1;stroke-width:2;stroke-miterlimit:10;" cx="13" cy="24" r="2"/>
-                    <path d="M25.658,10l-2.422,9H10.781L8.159,8.515C7.937,7.625,7.137,7,6.219,7H4C3.448,7,3,7.448,3,8c0,0.552,0.448,1,1,1h2.219
-                    l2.621,10.485C9.063,20.375,9.863,21,10.781,21h12.455c0.902,0,1.692-0.604,1.93-1.474L27.764,10H25.658z"/>
-                    <line style="fill:none;stroke:#f1f1f1;stroke-width:2;stroke-miterlimit:10;" x1="17" y1="7" x2="17" y2="15"/>
-                    <line style="fill:none;stroke:#f1f1f1;stroke-width:2;stroke-miterlimit:10;" x1="21" y1="11" x2="13" y2="11"/>
-                    </svg>
-                </div>
-                <p class="sideNav__cart__empty-cart__alert">
-                    هیچ محصولی در سبد خرید نیست.
-                </p>
-                <a href="" class="sideNav__cart__empty-cart__shop-link">
-                    بازگشت به فروشگاه
-                </a>
-            </div> -->
+        <div class="sideNav__cart__list">
+            <div  class="sideNav__cart__list__content">
+                <ul class="sideNav__cart__list__ul">
+                    <li>
 
-            <!-- Side cart list -->
-
-            <div class="sideNav__cart__footer">
-                <ul class="sideNav__cart__list">
-
+                    </li>
                 </ul>
                 <div class="sideNav__cart__list__info">
                     <div class="sideNav__cart__list__total-price">
