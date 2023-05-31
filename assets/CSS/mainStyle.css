@@ -5,6 +5,7 @@
     --third: #FEF200;
     --fourth: #d5d5d5;
     --hover: #dcd207;
+    --border: rgba(119,119,119,.2);
 }
 
 body {
@@ -233,7 +234,7 @@ input:focus{
     padding: 25px 0 25px 0;
     font-size: 1.2rem;
     font-weight: 600;
-    border-bottom: 1px solid rgba(119, 119, 119, 0.2);
+    border-bottom: 1px solid var(--border);
     margin-bottom: 15px;
 }
 
@@ -264,7 +265,7 @@ input:focus{
     color: #777;
     font-size: 1.1rem;
     border-radius: 5px;
-    border: 1px solid rgba(119,119,119,.2);
+    border: 1px solid var(--border);
 }
 
 .sideNav__login__form__extraItems{
@@ -309,8 +310,8 @@ input:focus{
     align-items: center;
     margin: 20px 0;
     padding-bottom: 20px;
-    border-bottom: 1px solid rgba(119,119,119,.2);
-    border-top: 1px solid rgba(119,119,119,.2);
+    border-bottom: 1px solid var(--border);
+    border-top: 1px solid var(--border);
 }
 
 .sideNav__login__form__create-account__question{
@@ -362,7 +363,7 @@ input:focus{
     padding: 25px 0 25px 0;
     font-size: 1.2rem;
     font-weight: 600;
-    border-bottom: 1px solid rgba(119, 119, 119, 0.2);
+    border-bottom: 1px solid var(--border);
     margin-bottom: 15px;
 }
 
@@ -419,6 +420,12 @@ input:focus{
     list-style: none;   
 }
 
+.sideNav__cart__list__ul__item{
+    display: flex;
+    min-height: 90px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+}
 
 .sideNav__cart__list__info{
     display: flex;
@@ -431,7 +438,7 @@ input:focus{
     padding: 15px 0;
     border-top: 1px solid;
     border-bottom: 1px solid;
-    border-color: rgba(119,119,119,.2);
+    border-color: var(--border);
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -454,7 +461,7 @@ input:focus{
 .sideNav__cart__list__view-cart{
     background: transparent;
     color: var(--second);
-    border: 1px solid rgba(119,119,119,.2);
+    border: 1px solid var(--border);
     border-radius: 5px;
     margin-bottom: 10px;
 }
