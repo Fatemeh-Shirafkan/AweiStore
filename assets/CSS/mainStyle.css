@@ -336,18 +336,18 @@ input:focus{
 /* Side login cart styles */
 
 .sideNav__cart{
-    height: 100vh;
-    width: 350px;
     position: fixed;
     top: 0;
     left: 0;
-    background: var(--fist);
     z-index: 500;
+    background: var(--fist);
+    height: 100vh;
+    width: 350px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     padding: 0 25px 30px 25px;
-    /* transform: translate3d(-100%,0,0); */
+    transform: translate3d(-100%,0,0);
     transition: transform .5s cubic-bezier(.19,1,.22,1);
 }
 
@@ -369,7 +369,7 @@ input:focus{
 
 /* Notification of empty cart (side navigation) */
 
-/* .sideNav__cart__empty-cart{
+.sideNav__cart__empty-cart{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -393,11 +393,11 @@ input:focus{
 
 .sideNav__cart__empty-cart__shop-link:hover{
     background: var(--hover);
-} */
+}
 
 /* Side cart list styles */
 
-.sideNav__cart__list{
+/* .sideNav__cart__list{
     position: relative;
     flex: 1;
 }
@@ -414,17 +414,72 @@ input:focus{
 
 .sideNav__cart__list__ul{
     display: flex;
+    flex-direction: column;
     flex: 1;
     max-height: 100%;
+    overflow: hidden;
     overflow-y: auto;
     list-style: none;   
 }
 
+.sideNav__cart__list__ul::-webkit-scrollbar{
+    width: 5px;
+}
+
+.sideNav__cart__list__ul::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+   
+.sideNav__cart__list__ul::-webkit-scrollbar-thumb {
+    background: var(--border); 
+}
+  
+.sideNav__cart__list__ul::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
 .sideNav__cart__list__ul__item{
     display: flex;
-    min-height: 90px;
+    min-height: 125px;
+    justify-content: space-between;
     padding-bottom: 10px;
+    margin-bottom: 15px;
     border-bottom: 1px solid var(--border);
+}
+
+.sideNav__cart__list__ul__item__product-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.sideNav__cart__list__ul__item__product-name{
+    color: #000;
+    font-weight: 700;
+    word-wrap: break-word;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    margin-left: 3px;
+    transition: all 0.6s;
+}
+
+.sideNav__cart__list__ul__item__product-name:hover{
+    color: var(--hover);
+}
+
+.sideNav__cart__list__ul__item__product-quantity{
+    width: 55px;
+    margin-bottom: 10px;
+}
+
+.sideNav__cart__list__ul__item__product-price{
+    color: var(--third);
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.sideNav__cart__list__ul__item--remove{
+    display: flex;
+    margin-left: 5px;
 }
 
 .sideNav__cart__list__info{
@@ -481,14 +536,7 @@ input:focus{
 .sideNav__cart__list__checkout:hover{
     background: var(--hover);
     color: var(--fist);
-}
-
-
-
-
-
-
-
+} */
 
 /* Blure dark layer styles */
 
