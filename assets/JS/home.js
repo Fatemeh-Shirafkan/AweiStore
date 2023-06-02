@@ -36,3 +36,6 @@ function closeCartNavHandeler (){
     sideNavCart.classList.remove("open__sideNav__cart");
     layer.classList.remove("sideNav__layer--active");
 };
+
+// Header slider
+

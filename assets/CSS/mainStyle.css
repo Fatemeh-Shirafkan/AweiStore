@@ -538,6 +538,44 @@ input:focus{
     color: var(--fist);
 } */
 
+/* Header slider styles */
+
+.header__slider{
+    margin-top: 40px;
+
+}
+
+.header__slider__items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.header__slider__dots{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #323232;
+}
+
+.header__slider__items__change-slide__next{
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+.header__slider__items__change-slide__prev{
+    transform: rotate(180deg);
+    position: absolute;
+    left: 10px;
+    cursor: pointer;
+}
+
+.header__slider__items__change-slide--hover:hover{
+    fill: grey;
+}
+
 /* Blure dark layer styles */
 
 .sideNav__layer{
