@@ -554,7 +554,7 @@ img{
 /* Product preview */
 
 .product-preview{
-    padding: 70px 0;
+    padding: 50px 0 0 0;
 }
 
 .product-preview__title{
@@ -583,7 +583,7 @@ img{
     fill: #808080;
 }
 
-/* Headphone preview section styles */
+/* Product cards styles */
 
 .product__card__row{
     padding: 20px 0;
@@ -604,6 +604,20 @@ img{
 .product__card__img{
     padding: 15px;
     margin-bottom: 10px;
+    position: relative;
+}
+
+.product__card__img__discount-label{
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    z-index: 2;
+    padding: 2px 10px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border-radius: 4px;
+    color: var(--fist);
+    background: var(--third);
 }
 
 .product__card__title{
