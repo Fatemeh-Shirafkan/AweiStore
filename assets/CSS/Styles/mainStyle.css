@@ -160,7 +160,7 @@ img{
 
 /* Dropdown menu */
 
-.menu__box__items__link--dot::before{
+.menu__box__items__link--dot::before {
     content: "";
     position: absolute;
     top: calc(50% - 0px);
@@ -171,7 +171,7 @@ img{
     background-color: #707070;
 }
 
-.menu__box__items__link--dropdown::after{
+.menu__box__items__link--dropdown::after {
     content: "▾";
     position: absolute;
     top: 13px;
@@ -182,7 +182,7 @@ img{
     font-size: 1.1rem;
 }
 
-.dropdown-menu__box{
+.dropdown-menu__box {
     visibility: hidden;
     position: absolute;
     top: 46px;
@@ -195,26 +195,26 @@ img{
     z-index: 300;
 }
 
-.menu__box__items__dropdown:hover .dropdown-menu__box{
+.menu__box__items__dropdown:hover .dropdown-menu__box {
     visibility: visible;
     transform: translateY(0);
     opacity: 1;
 }
 
-.dropdown-menu__box__item--link{
+.dropdown-menu__box__item--link {
     color: var(--fourth);
     font-size: 0.9rem;
     transition: color 0.8s;
     margin: 6px 0px 6px 83px;    
 }
 
-.dropdown-menu__box__item:hover .dropdown-menu__box__item--link{
+.dropdown-menu__box__item:hover .dropdown-menu__box__item--link {
     color: var(--third);
 }
 
 /* Side login navigation styles */
 
-.sideNav__login{
+.sideNav__login {
     height: 100vh;
     width: 350px;
     position: fixed;
@@ -229,12 +229,12 @@ img{
     transition: transform .5s cubic-bezier(.19,1,.22,1);
 }
 
-.sideNav__login.open__sideNav__login{
+.sideNav__login.open__sideNav__login {
     transform: none; 
 }
 
 
-.sideNav__login__heading{
+.sideNav__login__heading {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -245,7 +245,7 @@ img{
     margin-bottom: 15px;
 }
 
-.sideNav__login__form__username, .sideNav__login__form__password{
+.sideNav__login__form__username, .sideNav__login__form__password {
     font-size: 0.95rem;
     color: #333;
     display: flex;
@@ -254,15 +254,15 @@ img{
 
 }
 
-.sideNav__login__form__label--mb{
+.sideNav__login__form__label--mb {
     margin-bottom: 3px;
 }
 
-.required{
+.required {
     color: red;
 }
 
-.sideNav__login__form__input{
+.sideNav__login__form__input {
     padding: 0 15px;
     max-width: 100%;
     width: 100%;
@@ -275,29 +275,29 @@ img{
     border: 1px solid var(--border);
 }
 
-.sideNav__login__form__extraItems{
+.sideNav__login__form__extraItems {
     display: flex;
     flex-direction: column;
     font-size: 0.9rem;
 }
 
-.sideNav__login__form__rememberUser{
+.sideNav__login__form__rememberUser {
     margin-bottom: 15px;
     color: #333;
 }
 
-.sideNav__login__form__forgettingPass{
+.sideNav__login__form__forgettingPass {
     margin-bottom: 10px;
     color: var(--third);
     font-size: 1rem;
     font-weight: 800;
 }
 
-.sideNav__login__form__forgettingPass:hover{
+.sideNav__login__form__forgettingPass:hover {
     color: var(--third);
 }
 
-.sideNav__login__form__submit--style{
+.sideNav__login__form__submit--style {
     background: var(--third);
     color: var(--bg-color);
     padding: 5px 17px;
@@ -307,11 +307,11 @@ img{
     transition: all 0.6s;
 }
 
-.sideNav__login__form__submit--style:hover{
+.sideNav__login__form__submit--style:hover {
     background: var(--hover);
 }
 
-.sideNav__login__form__create-account{
+.sideNav__login__form__create-account {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -321,11 +321,11 @@ img{
     border-top: 1px solid var(--border);
 }
 
-.sideNav__login__form__create-account__question{
+.sideNav__login__form__create-account__question {
     font-weight: 700;
 }
 
-.sideNav__login__form__create-account__link{
+.sideNav__login__form__create-account__link {
     background: var(--third);
     color: var(--fist);
     font-size: 0.85rem;
@@ -335,14 +335,14 @@ img{
     transition: all 0.6s;
 }
 
-.sideNav__login__form__create-account__link:hover{
+.sideNav__login__form__create-account__link:hover {
     background: var(--hover);
     color: var(--fist);
 }
 
 /* Side login cart styles */
 
-.sideNav__cart{
+.sideNav__cart {
     position: fixed;
     top: 0;
     left: 0;
@@ -358,11 +358,11 @@ img{
     transition: transform .5s cubic-bezier(.19,1,.22,1);
 }
 
-.sideNav__cart.open__sideNav__cart{
+.sideNav__cart.open__sideNav__cart {
     transform: none; 
 }
 
-.sideNav__cart__header{
+.sideNav__cart__header {
     display: flex;
     flex: 0 1 0;
     align-items: center;
@@ -376,7 +376,7 @@ img{
 
 /* Notification of empty cart (side navigation) */
 
-.sideNav__cart__empty-cart{
+.sideNav__cart__empty-cart {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -384,11 +384,11 @@ img{
     padding-bottom: 20px;
 }
 
-.sideNav__cart__empty-cart__alert{
+.sideNav__cart__empty-cart__alert {
     font-weight: 700;
 }
 
-.sideNav__cart__empty-cart__shop-link{
+.sideNav__cart__empty-cart__shop-link {
     background: var(--third);
     color: var(--fist);
     font-size: 0.85rem;
@@ -398,14 +398,14 @@ img{
     transition: all 0.6s;
 }
 
-.sideNav__cart__empty-cart__shop-link:hover{
+.sideNav__cart__empty-cart__shop-link:hover {
     background: var(--hover);
     color: var(--fist);
 }
 
 /* Swiper slider for header styles */
 
-.header-slider{
+.header-slider {
     margin: 40px 0;
 }
 
@@ -570,7 +570,7 @@ img{
     position: relative;
 }
 
-.archive-product{
+.archive-product, .archive-product svg{
     color: var(--second);
     transition: all 0.4s;
 }
@@ -583,7 +583,7 @@ img{
     fill: #808080;
 }
 
-/* Product cards styles */
+/* PRODUCT CARDS styles */
 
 .product__card__row{
     padding: 20px 0;
@@ -698,15 +698,20 @@ img{
     border: 1px solid var(--third);
 }
 
-.product__card__footer__cart-btn:hover .product__card__footer__cart-btn--animation{
+.product__card__footer__cart-btn:hover .product__card__footer__cart-btn--animation {
     transform: translateX(110%);
     filter: drop-shadow(-28px -1px 0px #ffffff);
 }    
 
+/* BANNERS styles */
 
+.banner {
+    padding: 50px 0 0 0;
+}
 
-
-
+.banner__img{
+    border-radius: 20px;
+}
 
 
 
@@ -716,7 +721,7 @@ img{
 
 /* Blure dark layer styles */
 
-.sideNav__layer{
+.sideNav__layer {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -730,7 +735,7 @@ img{
     transition: opacity .5s cubic-bezier(.19,1,.22,1),visibility 0s cubic-bezier(.19,1,.22,1) .5s,z-index 0s cubic-bezier(.19,1,.22,1) .5s,top 0s cubic-bezier(.19,1,.22,1) .5s;
 }
 
-.sideNav__layer.sideNav__layer--active{
+.sideNav__layer.sideNav__layer--active {
     visibility: visible;
     opacity: 1;
     transition-delay: 0s;
