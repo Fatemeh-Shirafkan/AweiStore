@@ -38,7 +38,7 @@ img{
     box-shadow: none;
 }
 
-/* Header navbar styles */
+/* HEADER styles */
 
 .header{
     z-index: 300;
@@ -158,7 +158,7 @@ img{
     color: var(--third);
 }
 
-/* Dropdown menu */
+/* DROPDOWN menu */
 
 .menu__box__items__link--dot::before {
     content: "";
@@ -212,7 +212,7 @@ img{
     color: var(--third);
 }
 
-/* Side login navigation styles */
+/* SIDE LOGIN NAVIGATION styles */
 
 .sideNav__login {
     height: 100vh;
@@ -340,7 +340,7 @@ img{
     color: var(--fist);
 }
 
-/* Side login cart styles */
+/* SIDE CART styles */
 
 .sideNav__cart {
     position: fixed;
@@ -374,7 +374,7 @@ img{
     margin-bottom: 15px;
 }
 
-/* Notification of empty cart (side navigation) */
+/* NOTIFICATION OF EMPTY CART (side navigation) */
 
 .sideNav__cart__empty-cart {
     display: flex;
@@ -463,7 +463,7 @@ img{
     border:1.5px solid black;
 }
 
-/* Categories styles */
+/* CATEGORIES styles */
 
 .categories{
     padding: 30px 0;
@@ -551,7 +551,7 @@ img{
     color: var(--third);
 }
 
-/* Product preview */
+/* PRODUCT PREVIEW */
 
 .product-preview{
     padding: 50px 0 0 0;
@@ -713,9 +713,69 @@ img{
     border-radius: 20px;
 }
 
+/* ARTICLES STYLES */
+
+.articles {
+    padding: 50px 0 0 0;
+}
+
+.articles__title{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.articles__title span span {
+    color: var(--third);
+    font-weight: 900;
+}
+
+.articles__card__row{
+    padding: 35px 0;
+}
+
+.articles__card{
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 8px -3px rgb(166 196 198 / 35%);
+}
+
+
+.p{
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+}
+
+.ch{
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; /* adds three dots at the end */
+}
+
+
+.articles__card__content{
+    padding: 25px;
+}
 
 
 
+
+
+
+
+.articles__card__content--title{
+    color: #000;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+
+.articles__card__content__footer{
+    display: flex;
+
+}
 
 
 
