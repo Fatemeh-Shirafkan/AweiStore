@@ -884,11 +884,16 @@ img{
     cursor: pointer;
 }
 
+/* FOOTER styles */
 
+.footer{
+    background: #3a3a3a;
+    margin-top: 30px;
+}
 
-
-
-
+.footer__first-row{
+    padding: 40px 0;
+}
 
 
 
