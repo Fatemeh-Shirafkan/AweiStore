@@ -562,10 +562,6 @@ img{
     justify-content: space-between;
 }
 
-.mark-behind-title{
-    position: relative;
-}
-
 .archive-product, .archive-product svg{
     color: var(--second);
     transition: all 0.4s;
@@ -895,23 +891,56 @@ img{
     padding: 40px 0;
 }
 
+.footer__content__title{
+    color: var(--fist);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-right: 20px;
+}
 
+.footer__content__about-us{
+    margin-top: 15px;
+    color: #B0B0B0;
+}
 
+.footer__content__list--item{
+    margin-bottom: 10px;
+}
 
+.footer__content__list{
+    margin-top: 15px;
+}
 
+.footer__content__list--item--text{
+    color: #B0B0B0;
+    transition: all 0.4s;
+}
 
+.footer__content__list--item--text:hover{
+    color: var(--fist);
+}
 
+.footer__content__licence{
+    margin-top: 15px;
+    color: #B0B0B0;
+}
 
+.footer__second-row{
+    border-top: 1px solid #B0B0B0;
+    padding: 10px 0;
+    color: #B0B0B0;
+    font-weight: 500;
+}
 
+.developer{
+    font-weight: 500;
+    color: var(--third);
+    transition: all 0.4s;
+}
 
-
-
-
-
-
-
-
-
+.developer:hover{
+    color: var(--third);
+}
 
 
 
