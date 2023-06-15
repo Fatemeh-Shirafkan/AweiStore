@@ -1,15 +1,18 @@
 let $ = document;
 
-let openLoginNav= $.querySelector('#open-login-nav');
+let openLoginNav = $.querySelector('#open-login-nav');
 let closeLoginNav = $.querySelector('#close-login-nav');
 let sideNavLogin = $.querySelector('.sideNav__login');
 
-let openCartNav= $.querySelector('#open-cart-nav');
+let openCartNav = $.querySelector('#open-cart-nav');
 let closeCartNav = $.querySelector('#close-cart-nav');
 let sideNavCart = $.querySelector('.sideNav__cart');
 
+let headerDropDownMenu = $.querySelectorAll('.menu__box__items__dropdown');
 
-let layer = $.querySelector('#layer');
+let layer = $.querySelector('.layer');
+
+let productImg = $.querySelectorAll('.product-img');
 
 
 // Open/Close the login nav
@@ -45,6 +48,58 @@ closeCartNav.addEventListener('click', function (){
 layer.addEventListener('click', function (){
     sideNavCart.classList.remove("open__sideNav__cart");
 });
+
+
+//   Set the layer for bg (hover dropdown menu)
+
+headerDropDownMenu.forEach(function(items){
+    items.addEventListener('mouseenter',function(){
+        layer.classList.add("dropdown__menu__layer--active");
+        console.log("hi")
+    });
+
+    items.addEventListener('mouseleave',function(){
+        layer.classList.remove("dropdown__menu__layer--active");
+        console.log("by")
+    });
+});
+
+
+//   Set the another img for cards by hover
+
+productImg.forEach(function(img){
+
+    let orgSrc = img.src
+    let newSrc = './assets/images/photo2.jpg'
+    console.log(newSrc)
+
+
+    img.addEventListener('mouseenter',function(){
+        img.src = newSrc
+    });
+
+    img.addEventListener('mouseleave',function(){
+        img.src = orgSrc
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Header slider

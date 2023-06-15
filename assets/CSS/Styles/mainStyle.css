@@ -42,6 +42,7 @@ img{
 
 .header--bg{
     background: var(--fist);
+    z-index: 300;
 }
 
 /* First row styles */
@@ -131,6 +132,7 @@ img{
     border-radius: 0px 0px 20px 20px;
     padding: 3px;
     margin-top: 1px;
+    z-index: 300;
 }
 
 .menu__box{
@@ -142,7 +144,10 @@ img{
 
 .menu__box__items{
     position: relative;
-    padding: 10px 0;
+    /* height: 50px;
+    display: flex;
+    align-items: center;
+    cursor: pointer; */
 }
 
 .menu__box__items__link{
@@ -190,6 +195,7 @@ img{
     transition: all 350ms;
     z-index: 300;
 }
+
 
 .menu__box__items__dropdown:hover .dropdown-menu__box {
     visibility: visible;
@@ -920,7 +926,7 @@ img{
     color: var(--fist);
 }
 
-.footer__content__licence{
+.footer__content__license{
     margin-top: 15px;
     color: #B0B0B0;
 }
@@ -983,16 +989,9 @@ img{
 
 
 
-
-
-
-
-
-
-
 /* Blure dark layer styles */
 
-.sideNav__layer {
+.layer {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -1006,8 +1005,15 @@ img{
     transition: opacity .5s cubic-bezier(.19,1,.22,1),visibility 0s cubic-bezier(.19,1,.22,1) .5s,z-index 0s cubic-bezier(.19,1,.22,1) .5s,top 0s cubic-bezier(.19,1,.22,1) .5s;
 }
 
-.sideNav__layer.sideNav__layer--active {
+.layer.sideNav__layer--active {
     visibility: visible;
     opacity: 1;
     transition-delay: 0s;
+}
+
+.layer.dropdown__menu__layer--active {
+    visibility: visible;
+    opacity: 1;
+    z-index: 10;
+    background: rgb(0 0 0 / 30%);
 }
