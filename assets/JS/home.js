@@ -14,6 +14,8 @@ let layer = $.querySelector('.layer');
 
 let productImg = $.querySelectorAll('.product-img');
 
+let menu = $.querySelector('#menu-row');
+let scrollValue = null;
 
 // Open/Close the login nav
 
@@ -50,7 +52,7 @@ layer.addEventListener('click', function (){
 });
 
 
-//   Set the layer for bg (hover dropdown menu)
+// Set the layer for bg (hover dropdown menu)
 
 headerDropDownMenu.forEach(function(items){
     items.addEventListener('mouseenter',function(){
@@ -63,7 +65,7 @@ headerDropDownMenu.forEach(function(items){
 });
 
 
-//   Set the another img for cards by hover
+// Set the another img for cards by hover
 
 productImg.forEach(function(img){
 
@@ -80,10 +82,24 @@ productImg.forEach(function(img){
 });
 
 
+// Fixing the menu to the top with scroll
 
+window.addEventListener('scroll',function(){
 
-
-
+    if($.documentElement.scrollTop > 158){
+        menu.style.position = 'fixed';
+    }else{
+        menu.style.position = 'inherit';  
+    };
+    
+    if($.documentElement.scrollTop > scrollValue){
+        menu.style.top = '-80px';
+    }else {
+        menu.style.top = '0';
+    }; 
+        scrollValue = $.documentElement.scrollTop;
+    });
+    
 
 
 

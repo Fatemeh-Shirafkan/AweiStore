@@ -39,6 +39,7 @@ img{
 .header{
     z-index: 300;
     position: relative;
+    transition: all 1s;
 }
 
 .header--bg{
@@ -127,12 +128,17 @@ img{
 
 /* Third row styles */
 
+#menu-row{
+    position: inherit;
+    margin: 0 63.429px;
+    transition: all .8s;
+}
+
 .menu{
     background: var(--second);
     border-radius: 0px 0px 20px 20px;
     padding: 3px;
-    margin-top: 1px;
-    z-index: 300;
+    margin-top: .5px;
 }
 
 .menu__box{
