@@ -55,12 +55,10 @@ layer.addEventListener('click', function (){
 headerDropDownMenu.forEach(function(items){
     items.addEventListener('mouseenter',function(){
         layer.classList.add("dropdown__menu__layer--active");
-        console.log("hi")
     });
 
     items.addEventListener('mouseleave',function(){
         layer.classList.remove("dropdown__menu__layer--active");
-        console.log("by")
     });
 });
 
@@ -69,10 +67,8 @@ headerDropDownMenu.forEach(function(items){
 
 productImg.forEach(function(img){
 
-    let orgSrc = img.src
-    let newSrc = './assets/images/photo2.jpg'
-    console.log(newSrc)
-
+    let orgSrc = img.src;
+    let newSrc = './assets/images/photo2.jpg';
 
     img.addEventListener('mouseenter',function(){
         img.src = newSrc
