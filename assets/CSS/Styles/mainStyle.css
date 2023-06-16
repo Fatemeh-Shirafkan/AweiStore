@@ -1,7 +1,7 @@
 :root{padding: 0;
-    --bg-color: rgb(247, 247, 247);
+    --bg-color: #f7f7f7;
     --fist: #fff;
-    --second: rgb(50, 50, 50);
+    --second: #323232;
     --third: #FEF200;
     --fourth: #d5d5d5;
     --hover: #dcd207;
@@ -890,6 +890,40 @@ img{
 
 .articles__card__content__foote--share{
     cursor: pointer;
+    position: relative;
+}
+
+.tooltip__share{
+    position: absolute;
+    top: -5px;
+    left: 26px;
+    visibility: hidden;
+    opacity: 0;
+    background-color: rgba(0,0,0,.9);
+    max-width: 200px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all .5s;
+}
+
+.tooltip__share__content{
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+}
+
+.articles__card__content__foote--share:hover .tooltip__share{
+    visibility: visible;
+    opacity: 1;
+
+}
+
+.tooltip__share__content__icon{
+    transition: all .5s;
+}
+
+.tooltip__share__content__icon:hover{
+    fill: var(--third);
 }
 
 /* FOOTER styles */

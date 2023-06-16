@@ -17,6 +17,7 @@ let productImg = $.querySelectorAll('.product-img');
 let menu = $.querySelector('#menu-row');
 let scrollValue = null;
 
+
 // Open/Close the login nav
 
 openLoginNav.addEventListener('click', function (){
