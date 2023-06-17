@@ -114,7 +114,7 @@ img{
     padding: 4px 0px 0px 0px;    
     border-radius: 50%;
     position: absolute;
-    right: 18px;
+    right: -14px;
     bottom: 15px;
     font-size: 0.8rem;
     display: flex;
@@ -411,7 +411,7 @@ img{
     color: var(--fist);
 }
 
-/* Swiper slider for header styles */
+/* HEADER SLIDER styles */
 
 .header-slider {
     margin: 40px 0;
@@ -442,7 +442,8 @@ img{
 
 .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
     font-size: 1.8rem;
-    color: var(--border);
+    color: red;
+    display: none;
 }
 
 .swiper-button-prev:hover{
@@ -556,7 +557,7 @@ img{
 }
 
 .categories__card__name:hover{
-    color: var(--third);
+    color: var(--hover);
 }
 
 /* PRODUCT PREVIEW */
@@ -817,7 +818,7 @@ img{
     color: var(--fist);
     font-size: 0.8rem;
     font-weight: 500;
-    background: var(--third);
+    background: var(--second);
     padding: 1px 9px;
     border-radius: 8px;
     line-height: 20px;
@@ -899,7 +900,7 @@ img{
     left: 26px;
     visibility: hidden;
     opacity: 0;
-    background-color: rgba(0,0,0,.9);
+    background-color: rgba(0,0,0,.7);
     max-width: 200px;
     padding: 5px 10px;
     border-radius: 5px;
@@ -987,10 +988,6 @@ img{
 .developer:hover{
     color: var(--third);
 }
-
-
-
-
 
 
 
