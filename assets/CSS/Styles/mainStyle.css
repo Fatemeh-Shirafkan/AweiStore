@@ -411,6 +411,186 @@ img{
     color: var(--fist);
 }
 
+
+/* SIDE CART LIST STYLES */
+
+.sideNav__cart__list{
+    position: relative;
+    flex: 1;
+}
+
+.sideNav__cart__list__content{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.sideNav__cart__list__ul{
+    display: flex;
+    flex: 1;
+    max-height: 100%;
+    overflow-y: auto;
+    list-style: none;   
+}
+
+
+.sideNav__cart__list__info{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 0 1 0;
+}
+
+.sideNav__cart__list__total-price{
+    padding: 15px 0;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: rgba(119,119,119,.2);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.sideNav__cart__list__btn{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.sideNav__cart__list__btn--style{
+    border: 1px solid black;
+    width: 100%;
+    text-align: center;
+    padding: 6px 0;
+}
+
+.sideNav__cart__list__view-cart{
+    background: transparent;
+    color: var(--second);
+    border: 1px solid rgba(119,119,119,.2);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.sideNav__cart__list__view-cart:hover{
+    color: var(--second);
+}
+
+.sideNav__cart__list__checkout{
+    background: var(--third);
+    color: var(--fist);
+    border: none;
+    border-radius: 5px;
+    transition: all 0.6s;
+}
+
+.sideNav__cart__list__checkout:hover{
+    background: var(--hover);
+    color: var(--fist);
+}
+
+.sideNav__cart{
+    height: 100vh;
+    width: 350px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--fist);
+    z-index: 500;
+    background: var(--fist);
+    height: 100vh;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0 25px 30px 25px;
+    transform: translate3d(-100%,0,0);
+    transition: transform .5s cubic-bezier(.19,1,.22,1);
+}
+
+/* SIDE CART LIST ITEMS STYLES */
+
+.sideNav__cart__list{
+    position: relative;
+    flex: 1;
+}
+
+.sideNav__cart__list__ul{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    list-style: none;   
+}
+.sideNav__cart__list__ul::-webkit-scrollbar{
+    width: 5px;
+}
+.sideNav__cart__list__ul::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+   
+.sideNav__cart__list__ul::-webkit-scrollbar-thumb {
+    background: var(--border); 
+}
+  
+.sideNav__cart__list__ul::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+.sideNav__cart__list__ul__item{
+    display: flex;
+    min-height: 90px;
+    min-height: 125px;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--border);
+}
+.sideNav__cart__list__ul__item__product-info{
+    display: flex;
+    flex-direction: column;
+}
+.sideNav__cart__list__ul__item__product-name{
+    color: #000;
+    font-weight: 700;
+    word-wrap: break-word;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    margin-left: 3px;
+    transition: all 0.6s;
+}
+.sideNav__cart__list__ul__item__product-name:hover{
+    color: var(--hover);
+}
+.sideNav__cart__list__ul__item__product-quantity{
+    width: 55px;
+    margin-bottom: 10px;
+}
+.sideNav__cart__list__ul__item__product-price{
+    color: var(--third);
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+.sideNav__cart__list__ul__item--remove{
+    display: flex;
+    margin-left: 5px;
+}
+.sideNav__cart__list__info{
+    display: flex;
+    align-items: center;
+}
+.sideNav__cart__list__checkout:hover{
+    background: var(--hover);
+    color: var(--fist);
+}
+
 /* HEADER SLIDER styles */
 
 .header-slider {
@@ -973,10 +1153,10 @@ img{
 }
 
 .footer__second-row{
-    border-top: 1px solid #B0B0B0;
-    padding: 10px 0;
+    border-top: 0.1px solid #B0B0B0;
+    padding: 15px 0;
     color: #B0B0B0;
-    font-weight: 500;
+    font-weight: 300;
 }
 
 .developer{
