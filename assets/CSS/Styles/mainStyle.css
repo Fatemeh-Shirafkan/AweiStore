@@ -295,13 +295,13 @@ img{
 
 .login__form__forgettingPass {
     margin-bottom: 10px;
-    color: var(--third);
+    color: var(--hover);
     font-size: 1rem;
     font-weight: 800;
 }
 
 .login__form__forgettingPass:hover {
-    color: var(--third);
+    color: var(--hover);
 }
 
 .login__form__submit--style {
