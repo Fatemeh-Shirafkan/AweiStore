@@ -169,29 +169,29 @@ let header = `
 </div>
 
 <form class="sideNav__login__form">
-    <div class="sideNav__login__form__username">
-        <label class="sideNav__login__form__label--mb" for="login-username">
+    <div class="login__form__username">
+        <label class="login__form__label--mb" for="login-username">
             نام کاربری یا ایمیل
             <span class="required">*</span>
         </label>
-        <input id="login-username" type="text" class="sideNav__login__form__input">
+        <input id="login-username" type="text" class="login__form__input">
     </div>
-    <div class="sideNav__login__form__password">
-        <label class="sideNav__login__form__label--mb" for="login-password">
+    <div class="login__form__password">
+        <label class="login__form__label--mb" for="login-password">
             گذرواژه
             <span class="required">*</span>
         </label>
-        <input id="login-password" type="password" class="sideNav__login__form__input">
+        <input id="login-password" type="password" class="login__form__input">
     </div>
-    <div class="sideNav__login__form__extraItems">
-        <div class="sideNav__login__form__rememberUser">
+    <div class="login__form__extraItems">
+        <div class="login__form__rememberUser">
             <input type="checkbox" name="" id="login-rememberUser">
             <label for="login-rememberUser"> مرا به خاطر بسپار</label>    
         </div>
-        <a  class="sideNav__login__form__forgettingPass" href="">گذرواژه خود را فراموش کرده اید؟</a>
+        <a  class="login__form__forgettingPass" href="">گذرواژه خود را فراموش کرده اید؟</a>
     </div>
-    <div class="sideNav__login__form__submit">
-        <button type="submit" class="sideNav__login__form__submit--style">ورود
+    <div class="login__form__submit">
+        <button type="submit" class="login__form__submit--style">ورود
         </button>
     </div>
 

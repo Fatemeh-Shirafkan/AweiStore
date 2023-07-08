@@ -34,3 +34,38 @@
 .breadCrumb__previous__page:hover{
     color: var(--hover);
 }
+
+/* REGISTER & LOG IN FORMS styles */
+
+.forms__box{
+    margin: 0 auto;
+    max-width: 1000px;
+    margin-bottom: 20px;
+}
+
+.form__separator{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--second);
+    font-weight: 500;
+}
+
+.form__separator__content{
+    padding: 10px 0;
+}
+
+.form__separator::before{
+    content: "";
+    flex: 1 1 auto;
+    border-width: 1px;
+    border-left-style: solid;
+}
+
+.form__separator::after{
+    content: "";
+    flex: 1 1 auto;
+    border-width: 1px;
+    border-left-style: solid;
+}

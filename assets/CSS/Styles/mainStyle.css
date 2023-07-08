@@ -67,7 +67,7 @@ img{
 
 .search-box__form{
     background: var(--second);
-    padding: 10px;
+    padding: 8px;
     border-radius: 20px 20px 0 0;
 }
 
@@ -137,8 +137,7 @@ img{
 .menu{
     background: var(--second);
     border-radius: 0px 0px 20px 20px;
-    padding: 3px;
-    margin-top: .5px;
+    margin-top: .9px;
 }
 
 .menu__box{
@@ -253,7 +252,7 @@ img{
     margin-bottom: 15px;
 }
 
-.sideNav__login__form__username, .sideNav__login__form__password {
+.login__form__username, .login__form__password {
     font-size: 0.95rem;
     color: #333;
     display: flex;
@@ -262,7 +261,7 @@ img{
 
 }
 
-.sideNav__login__form__label--mb {
+.login__form__label--mb {
     margin-bottom: 3px;
 }
 
@@ -270,7 +269,7 @@ img{
     color: red;
 }
 
-.sideNav__login__form__input {
+.login__form__input {
     padding: 0 15px;
     max-width: 100%;
     width: 100%;
@@ -283,29 +282,29 @@ img{
     border: 1px solid var(--border);
 }
 
-.sideNav__login__form__extraItems {
+.login__form__extraItems {
     display: flex;
     flex-direction: column;
     font-size: 0.9rem;
 }
 
-.sideNav__login__form__rememberUser {
+.login__form__rememberUser {
     margin-bottom: 15px;
     color: #333;
 }
 
-.sideNav__login__form__forgettingPass {
+.login__form__forgettingPass {
     margin-bottom: 10px;
     color: var(--third);
     font-size: 1rem;
     font-weight: 800;
 }
 
-.sideNav__login__form__forgettingPass:hover {
+.login__form__forgettingPass:hover {
     color: var(--third);
 }
 
-.sideNav__login__form__submit--style {
+.login__form__submit--style {
     background: var(--third);
     color: var(--bg-color);
     padding: 5px 17px;
@@ -315,7 +314,7 @@ img{
     transition: all 0.6s;
 }
 
-.sideNav__login__form__submit--style:hover {
+.login__form__submit--style:hover {
     background: var(--hover);
 }
 
@@ -436,7 +435,6 @@ img{
     overflow-y: auto;
     list-style: none;   
 }
-
 
 .sideNav__cart__list__info{
     display: flex;
