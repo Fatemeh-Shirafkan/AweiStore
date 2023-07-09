@@ -9,32 +9,6 @@
     --text: #a5a5a5;
 }
 
-/* TITLE SECTION & BREADCRUMB styles */
-
-.title__section{
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.page__title{
-    font-size: 2.3rem;
-}
-
-.breadCrumb{
-    display: flex;
-    flex-direction: row;
-    column-gap: 10px;
-}
-
-.breadCrumb__previous__page{
-    color: var(--text);
-    transition: all 0.5s;
-}
-
-.breadCrumb__previous__page:hover{
-    color: var(--hover);
-}
-
 /* REGISTER & LOG IN FORMS styles */
 
 .forms__box{
