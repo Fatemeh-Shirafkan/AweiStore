@@ -45,7 +45,7 @@ let header = `
                         </span>
                     </div>
                     <div class="icons-box__item cart-count--parent">
-                        <a href="">
+                        <a href="./interest.html">
                             <svg fill="#0B1719" width="27px" height="27px" viewBox="0 0 32 32" >
                             <path class="bentblocks_een" d="M21.081,6C23.752,6.031,26,8.766,26,12c0,5.106-6.47,10.969-10.001,13.593
                             C12.466,22.974,6,17.12,6,12c0-3.234,2.248-5.969,4.918-6C13.586,6.175,13.926,6.801,16,8.879C18.069,6.806,18.418,6.173,21.081,6
@@ -203,7 +203,7 @@ let header = `
         </div>
         <p class="sideNav__login__form__create-account__question">هنوز حساب کاربری ندارید؟
         </p>
-        <a href=""  class="sideNav__login__form__create-account__link">ایجاد حساب کاربری
+        <a href="./register.html" class="sideNav__login__form__create-account__link">ایجاد حساب کاربری
         </a>
     </div>
 </form>
