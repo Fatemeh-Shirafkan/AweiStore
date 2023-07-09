@@ -1126,6 +1126,8 @@ img{
 .footer__content__about-us{
     margin-top: 15px;
     color: #B0B0B0;
+    text-align: justify;
+    padding-left: 22px;
 }
 
 .footer__content__list--item{
