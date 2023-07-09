@@ -237,7 +237,7 @@ let header = `
     <p class="sideNav__cart__empty-cart__alert">
         هیچ محصولی در سبد خرید نیست.
     </p>
-    <a href="" class="sideNav__cart__empty-cart__shop-link">
+    <a href="" class="back__store">
         بازگشت به فروشگاه
     </a>
 </div>
