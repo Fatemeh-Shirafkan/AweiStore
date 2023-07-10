@@ -8,3 +8,9 @@
     --border: rgba(119, 119, 119, 0.2);
     --text: #a5a5a5;
 }
+
+/* PRODUCT BREADCRUMB */
+
+.product__breadCrumb{
+    margin: 35px 0;
+}
