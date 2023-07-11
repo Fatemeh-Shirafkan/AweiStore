@@ -568,8 +568,12 @@ img{
 .sideNav__cart__list__ul__item__product-name:hover{
     color: var(--hover);
 }
-.sideNav__cart__list__ul__item__product-quantity{
-    width: 55px;
+.product__count{
+    background: transparent;
+    border-radius: 7px;
+    padding-left: 15px;
+    direction: ltr;
+    padding-right: 7px;
     margin-bottom: 10px;
 }
 .sideNav__cart__list__ul__item__product-price{
