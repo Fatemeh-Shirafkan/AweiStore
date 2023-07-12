@@ -116,19 +116,10 @@
 .add__product__interest__text{
     font-size: 0.9rem;
     font-weight: 800;
-    transition: all 0.4s;
 }
 
-.add__product__interest__icon{
-    transition: all 0.4s;
-}
-
-.add__product__interest:hover .add__product__interest__text{
-    color: var(--text);
-}
-
-.add__product__interest:hover .add__product__interest__icon{
-    fill: var(--text);
+.add__product__interest .add__product__interest-active{
+    fill: red;
 }
 
 .share__product__text{
