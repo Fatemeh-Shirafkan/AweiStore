@@ -100,3 +100,11 @@
     transform: scale(2);
     margin: 0 15px;
 }
+
+
+.product__img{
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
