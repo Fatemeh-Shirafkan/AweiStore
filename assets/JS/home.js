@@ -12,7 +12,7 @@ let headerDropDownMenu = $.querySelectorAll('.menu__box__items__dropdown');
 
 let layer = $.querySelector('.layer');
 
-let productImg = $.querySelectorAll('.product-img');
+let productCardImg = $.querySelectorAll('.product-img');
 
 let menu = $.querySelector('#menu-row');
 let scrollValue = null;
@@ -68,7 +68,7 @@ headerDropDownMenu.forEach(function(items){
 
 // Set the another img for cards by hover
 
-productImg.forEach(function(img){
+productCardImg.forEach(function(img){
 
     let orgSrc = img.src;
     let newSrc = './assets/images/photo2.jpg';

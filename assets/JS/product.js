@@ -1,7 +1,7 @@
-let $ = document;
-
-let productImgBox = $.querySelector(".product__img");
-let productImg = $.querySelector(".product__img img");
+let productImgBox = document.querySelector(".product__img");
+let productImg = document.querySelector(".product__img img");
+let addProductInterest = document.querySelector(".add__product__interest");
+console.log(addProductInterest)
 
 // PRODUCT IMG HOVER FEATURE 
 
