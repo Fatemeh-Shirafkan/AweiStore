@@ -34,6 +34,11 @@
 
 .product__img__item img{
     border-radius: 8px;
+    transition: all 0.4s;
+}
+
+.product__img__item img:hover{
+    opacity: 0.6;
 }
 
 /* PRODUCT INFO styles */
@@ -137,3 +142,39 @@
     margin: 0 15px;
 }
 
+/* TOGGLE TAB styles */
+
+.tab__wrapper{
+    margin-bottom: 25px;
+    border-bottom: 2px solid rgba(119,119,119,.2);
+    text-align: center;
+}
+
+.tab__wrapper__list__item{
+    display: inline;
+    cursor: pointer;
+}
+
+.tab__wrapper__list__item__text{
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #666;
+    position: relative;
+    transition: all 0.4s;
+}
+
+.tab__wrapper__list__item__text:hover{
+    color: #000;
+}
+
+.dot-style::before{
+    content: "";
+    position: absolute;
+    top: calc(50% - 2px);
+    left: calc(100% - 2px);
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #d5d5d5;
+}
