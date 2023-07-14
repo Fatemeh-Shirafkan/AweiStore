@@ -203,6 +203,12 @@
     background-color: #d5d5d5;
 }
 
+/* TOGGLE TAB CONTENTES styles */
+
+.content__wrapper.active{
+    display: none;
+}
+
 .content__wrapper__description__text{
     color: #666;
     margin-bottom: 20px;

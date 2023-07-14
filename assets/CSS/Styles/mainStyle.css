@@ -1118,34 +1118,40 @@ img{
 }
 
 .footer__content__title{
-    color: var(--fist);
-    font-weight: 600;
-    font-size: 1.1rem;
-    margin-right: 20px;
+    color: var(--third);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 0!important;
+    user-select: none;
+    background: -webkit-linear-gradient(45deg,#fff,#FEF200);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0,0,0,0);
 }
 
 .footer__content__about-us{
     margin-top: 15px;
-    color: #B0B0B0;
+    color: var(--fist);
     text-align: justify;
     padding-left: 22px;
+    font-size: 0.9rem;
 }
 
 .footer__content__list--item{
     margin-bottom: 10px;
+    font-size: 0.9rem;
 }
 
 .footer__content__list{
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 .footer__content__list--item--text{
-    color: #B0B0B0;
+    color: var(--fist);
     transition: all 0.4s;
 }
 
 .footer__content__list--item--text:hover{
-    color: var(--fist);
+    color: var(--hover);
 }
 
 .footer__content__license{
@@ -1153,21 +1159,40 @@ img{
     color: #B0B0B0;
 }
 
-.footer__second-row{
-    border-top: 0.1px solid #B0B0B0;
-    padding: 15px 0;
-    color: #B0B0B0;
-    font-weight: 300;
+.trust-symbol{
+    display: flex;
+    column-gap: 10px;
+    width: 100%;
+    margin-right: 106px;
 }
 
-.developer{
+.footer__second-row__form-title{
+    font-size: 0.9rem;
+    color: var(--fist);
     font-weight: 500;
-    color: var(--third);
-    transition: all 0.4s;
 }
 
-.developer:hover{
-    color: var(--third);
+.footer__second-row__form{
+    margin-top: 10px;
+}
+
+.footer__second-row__form-email{
+    width: 232px;
+    height: 40px;
+    border: none;
+    border-radius: 18px;
+    direction: rtl;
+    padding-right: 10px;
+}
+
+.footer__second-row__form-email::placeholder{
+    font-size: 0.8rem;
+}
+
+.footer__second-row__form-submit{
+    background: -webkit-linear-gradient(45deg,#fff,#FEF200);
+    padding: 8px 20px;
+    border-radius: 18px;
 }
 
 /* these styles are used for many pages (start) */
