@@ -1195,6 +1195,31 @@ img{
     border-radius: 18px;
 }
 
+.footer__third-row__socialMedia__list{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    column-gap: 8px;
+}
+
+.footer__third-row__alert{
+    text-align: center;
+    color: var(--fist);
+    font-weight: 300;
+    margin-bottom: 8px;
+}
+
+.footer__third-row__socialMedia__list--item-icon{
+    transition: all 0.4s;
+}
+
+.footer__third-row__socialMedia__list--item:hover 
+.footer__third-row__socialMedia__list--item-icon{
+transform: translateY(-20px);
+}
+
+
 /* these styles are used for many pages (start) */
 /* TITLE SECTION & BREADCRUMB styles */
 
