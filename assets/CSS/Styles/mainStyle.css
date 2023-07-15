@@ -1193,6 +1193,7 @@ img{
     background: -webkit-linear-gradient(45deg,#fff,#FEF200);
     padding: 8px 20px;
     border-radius: 18px;
+    border: none;
 }
 
 .footer__third-row__socialMedia__list{
