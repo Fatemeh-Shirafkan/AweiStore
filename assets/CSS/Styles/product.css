@@ -245,7 +245,8 @@
 /* REVIEWS PART styles */
 
 .reviews__title{
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    font-weight: 600;
 }
 
 .reviews__empty-alert{
@@ -289,4 +290,79 @@
     margin-bottom: 2px;
     font-size: 0.9rem;
     color: #666;
+}
+
+/* WRITE COMMENT styles */
+
+.writeComment__title{
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.writeComment__form__note{
+    display: block;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.writeComment__form__score{
+    display: flex;
+    column-gap: 17px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.writeComment__form__comment textarea{
+    width: 100%;
+    background: transparent;
+    border: 1px solid var(--border);
+}
+
+.writeComment__form__comment textarea:focus{
+    outline: 1px solid var(--border);
+}
+
+.writeComment__form__info{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.writeComment__form__info-author label, .writeComment__form__info-email label{
+    display: block;
+}
+
+.writeComment__form__info-author input, .writeComment__form__info-email input{
+    width: 100%;
+    background: transparent;
+    border: 1px solid var(--border);
+    height: 42px;
+}
+
+.writeComment__form__cookies-consent{
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    margin-bottom: 20px;
+}
+
+.writeComment__form__cookies-consent label{
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.writeComment__form__submit--btn{
+    border: none;
+    border-radius: 7px;
+    background: var(--third);
+    color: var(--fist);
+    font-weight: 600;
+    padding: 4px 25px;
+    transition: all 0.5s;
+}
+
+.writeComment__form__submit--btn:hover{
+    background: var(--hover);
 }
