@@ -185,11 +185,11 @@
     color: var(--second);
 }
 
-.tab__wrapper__list__item__text.active{
+.tab__wrapper__list__item.active .tab__wrapper__list__item__text{
     color: var(--second);
 }
 
-.tab__wrapper__list__item__text.active.tab__wrapper__list__item__text::after{
+.tab__wrapper__list__item.active .tab__wrapper__list__item__text::after{
     width: 90%;
 }
 
@@ -206,8 +206,12 @@
 
 /* TOGGLE TAB CONTENTES styles */
 
-.content__wrapper.active{
+.content__wrapper{
     display: none;
+}
+
+.content__wrapper.active{
+    display: flex;
 }
 
 .content__wrapper__description__text{
@@ -365,4 +369,14 @@
 
 .writeComment__form__submit--btn:hover{
     background: var(--hover);
+}
+
+/* RELATED PRODUCT styles */
+
+.related__product{
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--second);
+    margin-bottom: 20px;
+    margin-right: 3px;
 }
