@@ -9,24 +9,3 @@
     --text: #a5a5a5;
 }
 
-/* INTEREST EMPTY ALERT styles */
-
-.interest__empty-alert{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.interest__empty-alert__text, .interest__empty-alert__icon, .interest__empty-alert__btn{
-    margin-bottom: 30px;
-}
-
-.interest__empty-alert__icon{
-    opacity: 0.2;
-    margin-bottom: 30px;
-}
-
-.interest__empty-alert__text--style{
-    font-size: 2.3rem;
-    font-weight: 700;
-}
