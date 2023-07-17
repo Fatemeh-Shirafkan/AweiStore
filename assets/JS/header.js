@@ -139,7 +139,7 @@ let header = `
                     </li>
 
                     <li class="menu__box__items">
-                        <a class="menu__box__items__link " href="">فروشگاه</a>
+                        <a class="menu__box__items__link " href="./store.html">فروشگاه</a>
                     </li>
 
                     <li class="menu__box__items">
@@ -237,7 +237,7 @@ let header = `
     <p class="sideNav__cart__empty-cart__alert">
         هیچ محصولی در سبد خرید نیست.
     </p>
-    <a href="" class="back__store">
+    <a href="./store.html" class="back__store">
         بازگشت به فروشگاه
     </a>
 </div>

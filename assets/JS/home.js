@@ -93,11 +93,14 @@ window.addEventListener('scroll',function(){
         menu.style.position = 'inherit';  
     };
     
-    if($.documentElement.scrollTop > scrollValue){
-        menu.style.top = '-80px';
-    }else {
-        menu.style.top = '0';
-    }; 
+    if($.documentElement.scrollTop > 158){
+
+        if($.documentElement.scrollTop > scrollValue){
+            menu.style.top = '-80px';
+        }else {
+            menu.style.top = '0';
+        }; 
+    }
         scrollValue = $.documentElement.scrollTop;
     });
     
