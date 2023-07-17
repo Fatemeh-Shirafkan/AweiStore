@@ -1,0 +1,66 @@
+:root{
+    --bg-color: #f7f7f7;
+    --fist: #fff;
+    --second: #323232;
+    --third: #FEF200;
+    --fourth: #d5d5d5;
+    --hover: #dcd207;
+    --border: rgba(119, 119, 119, 0.2);
+    --text: #a5a5a5;
+}
+
+/* TABLE OF USER CART styles */
+
+.empty__alert__cart-page{
+    display: none;
+}
+
+th{
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+td, th{
+    padding: 15px 10px;
+    border-bottom: 1px solid #E4E4E4;
+}
+
+
+img{
+    border-radius: 8px;
+}
+
+.product__count{
+    background: transparent;
+    border-radius: 7px;
+    padding-left: 5px;
+    direction: ltr;
+    width: 46px;
+    padding-top: 3px;
+}
+
+.remove-product{
+    padding-right: 0;
+}
+
+.product-name{
+    min-width: 285px;
+}
+
+.product-price{
+    width: 165px;
+    text-align: center;
+}
+
+.product-count{
+    text-align: center;
+}
+
+.product-subtotal{
+    text-align: left;
+    padding-left: 0;
+}
+
+.cart-product-table{
+    width: 100%;
+}
