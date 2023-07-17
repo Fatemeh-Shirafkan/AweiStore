@@ -92,6 +92,7 @@
     padding-left: 15px;
     direction: ltr;
     padding-right: 7px;
+    border: 1px gray solid;
 }
 
 .add__product__cart{
