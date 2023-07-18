@@ -8,3 +8,43 @@
     --border: rgba(119, 119, 119, 0.2);
     --text: #a5a5a5;
 }
+
+.product-status{
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    margin-bottom: 30px;
+    row-gap: 10px;
+    background: var(--fist);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 5px 8px -3px rgba(0, 0, 0, .1);
+}
+
+.product-status__title{
+    margin-right: 22px;
+    font-weight: 700;
+}
+
+.product-status__item{
+    position: relative;
+    margin-right: 22px;
+    cursor: pointer;
+}
+
+.product-status__item::before{
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    background: transparent;
+    top: 6px;
+    right: -22px;
+    transition: all 0.4s;
+}
+
+.product-status__item:hover.product-status__item::before{
+    border: 1px solid var(--hover);
+}
