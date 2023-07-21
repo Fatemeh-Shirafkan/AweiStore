@@ -1230,6 +1230,7 @@ transform: translateY(-20px);
 
 .page__title{
     font-size: 2.3rem;
+    user-select: none;
 }
 
 .breadCrumb{
@@ -1241,6 +1242,7 @@ transform: translateY(-20px);
 .breadCrumb__previous__page{
     color: var(--text);
     transition: all 0.5s;
+    user-select: none;
 }
 
 .breadCrumb__previous__page:hover{
