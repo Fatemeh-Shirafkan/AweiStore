@@ -105,9 +105,45 @@ window.addEventListener('scroll',function(){
     });
     
 
+///////////////////////////////// PSEUDO DATABASE /////////////////////////////////
 
+let allProducts ={
 
+    headphone:{
 
+        earphone:[
+            {id: 1, title: 'T29P TWS Bluetooth Earphone', price: 1000000, img1:'./assets/images/products/headphone/earphone/T29P TWS Bluetooth Earphone/T29P TWS Bluetooth Earphone1.jpg', img2:'./assets/images/products/headphone/earphone/T29P TWS Bluetooth Earphone/T29P TWS Bluetooth Earphone2.jpg', img3:'./assets/images/products/headphone/earphone/T29P TWS Bluetooth Earphone/T29P TWS Bluetooth Earphone3.jpg', count: 1, },
+
+            {id: 2, title: 'T36 TWS Stereo Earbuds', price: 1200000, img1:'./assets/images/products/headphone/earphone/T36 TWS Stereo Earbuds/T36 TWS Stereo Earbuds1.jpg', img2:'./assets/images/products/headphone/earphone/T36 TWS Stereo Earbuds/T36 TWS Stereo Earbuds2.jpg', img3:'./assets/images/products/headphone/earphone/T36 TWS Stereo Earbuds/T36 TWS Stereo Earbuds3.jpg', count: 1,},
+
+            {id: 3, title: 'T55 Bluetooth Earphone', price: 990000, img1:'./assets/images/products/headphone/earphone/T55 Bluetooth Earphone/T55 Bluetooth Earphone1.jpg', img2:'./assets/images/products/headphone/earphone/T55 Bluetooth Earphone/T55 Bluetooth Earphone2.jpg', img3:'./assets/images/products/headphone/earphone/T55 Bluetooth Earphone/T55 Bluetooth Earphone3.jpg', count: 1,},
+
+            {id: 4, title: 'T55 Bluetooth Earphone', price: 1500000, img1:'./assets/images/products/headphone/earphone/TA3 TWS ANC Earbuds/TA3 TWS ANC Earbuds1.jpg', img2:'./assets/images/products/headphone/earphone/TA3 TWS ANC Earbuds/TA3 TWS ANC Earbuds2.jpg', count: 1,},
+        ],
+
+        gaming:[
+            {id: 1, title: 'A710BL Bluetooth Headset', price: 9500000, img1:'./assets/images/products/headphone/gaming/A710BL Bluetooth Headset/A710BL Bluetooth Headset1.jpg', img2:'./assets/images/products/headphone/gaming/A710BL Bluetooth Headset/A710BL Bluetooth Headset2.jpg', img3:'./assets/images/products/headphone/gaming/A710BL Bluetooth Headset/A710BL Bluetooth Headset3.jpg', count: 1, },
+
+            {id: 2, title: 'ES-770i Bluetooth Headset', price: 2100000, img1:'./assets/images/products/headphone/gaming/ES-770i Bluetooth Headset/ES-770i Bluetooth Headset1.jpg', img2:'./assets/images/products/headphone/gaming/ES-770i Bluetooth Headset/ES-770i Bluetooth Headset2.jpg', count: 1, },
+        ],
+    },
+
+    speaker:{
+
+        protable:[
+            {id: 1, title: 'Y280 Bluetooth Speaker', price: 1800000, img1:'./assets/images/products/speaker/protable/Y280 Bluetooth Speaker/Y280 Bluetooth Speaker1.jpg', img2:'./assets/images/products/speaker/protable/Y280 Bluetooth Speaker/Y280 Bluetooth Speaker2.jpg', img3:'./assets/images/products/speaker/protable/Y280 Bluetooth Speaker/Y280 Bluetooth Speaker3.jpg', count: 1,},
+
+            {id: 2, title: 'Y668 Bluetooth Speaker', price: 1700000, img1:'./assets/images/products/speaker/protable/Y668 Bluetooth Speaker/Y668 Bluetooth Speaker1.jpg', img2:'./assets/images/products/speaker/protable/Y668 Bluetooth Speaker/Y668 Bluetooth Speaker2.jpg', img3:'./assets/images/products/speaker/protable/Y668 Bluetooth Speaker/Y668 Bluetooth Speaker3.jpg', count: 1,},
+
+            {id: 3, title: 'Y669 Bluetooth Speaker', price: 2500000, img1:'./assets/images/products/speaker/protable/Y669 Bluetooth Speaker/Y669 Bluetooth Speaker1.jpg', img2:'./assets/images/products/speaker/protable/Y669 Bluetooth Speaker/Y669 Bluetooth Speaker2.jpg', img3:'./assets/images/products/speaker/protable/Y669 Bluetooth Speaker/Y669 Bluetooth Speaker3.jpg', count: 1,},
+        ],
+
+        sandbar:[
+            {id: 1, title: 'Y999 Bluetooth Speaker', price: 3200000, img1:'./assets/images/products/speaker/sandbar/Y999 Bluetooth Speaker/Y999 Bluetooth Speaker1.jpg', img2:'./assets/images/products/speaker/sandbar/Y999 Bluetooth Speaker/Y999 Bluetooth Speaker2.jpg', img3:'./assets/images/products/speaker/sandbar/Y999 Bluetooth Speaker/Y999 Bluetooth Speaker3.jpg', count: 1,},
+        ],
+    },
+
+};
 
 
 
