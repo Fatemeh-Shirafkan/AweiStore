@@ -286,3 +286,86 @@ let header = `
 `;
 
 document.body.insertAdjacentHTML("afterbegin",header);
+
+
+let openLoginNav = document.querySelector('#open-login-nav');
+let closeLoginNav = document.querySelector('#close-login-nav');
+let sideNavLogin = document.querySelector('.sideNav__login');
+
+let openCartNav = document.querySelector('#open-cart-nav');
+let closeCartNav = document.querySelector('#close-cart-nav');
+let sideNavCart = document.querySelector('.sideNav__cart');
+
+let headerDropDownMenu = document.querySelectorAll('.menu__box__items__dropdown');
+
+let layer = document.querySelector('.layer');
+
+let menu = document.querySelector('#menu-row');
+let scrollValue = null;
+
+// Open/Close the login nav
+
+openLoginNav.addEventListener('click', function (){
+    sideNavLogin.classList.add("open__sideNav__login");
+    layer.classList.add("sideNav__layer--active");
+});
+
+closeLoginNav.addEventListener('click', function (){
+    sideNavLogin.classList.remove("open__sideNav__login");
+    layer.classList.remove("sideNav__layer--active");
+});
+
+layer.addEventListener('click', function (){
+    sideNavLogin.classList.remove("open__sideNav__login");
+    layer.classList.remove("sideNav__layer--active");
+});
+
+// Open/Close the cart nav
+
+openCartNav.addEventListener('click', function (){
+    sideNavCart.classList.add("open__sideNav__cart");
+    layer.classList.add("sideNav__layer--active");
+});
+
+closeCartNav.addEventListener('click', function (){
+    sideNavCart.classList.remove("open__sideNav__cart");
+    layer.classList.remove("sideNav__layer--active");
+});
+
+layer.addEventListener('click', function (){
+    sideNavCart.classList.remove("open__sideNav__cart");
+});
+
+// Set the layer for bg (hover dropdown menu)
+
+headerDropDownMenu.forEach(function(items){
+    items.addEventListener('mouseenter',function(){
+        layer.classList.add("dropdown__menu__layer--active");
+    });
+
+    items.addEventListener('mouseleave',function(){
+        layer.classList.remove("dropdown__menu__layer--active");
+    });
+});
+
+// Fixing the menu to the top with scroll
+
+window.addEventListener('scroll',function(){
+
+    if(document.documentElement.scrollTop > 158){
+        menu.style.position = 'fixed';
+    }else{
+        menu.style.position = 'inherit';  
+    };
+    
+    if(document.documentElement.scrollTop > 158){
+
+        if(document.documentElement.scrollTop > scrollValue){
+            menu.style.top = '-80px';
+        }else {
+            menu.style.top = '0';
+        }; 
+    }
+        scrollValue = document.documentElement.scrollTop;
+});
+    
