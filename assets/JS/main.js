@@ -1,70 +1,239 @@
-let $ = document;
-
-let productCardImg = $.querySelectorAll('.product-img');
-
-// Set the another img for cards by hover
-
-productCardImg.forEach(function(img){
-
-    let orgSrc = img.src;
-    let newSrc = './assets/images/photo2.jpg';
-
-    img.addEventListener('mouseenter',function(){
-        img.src = newSrc
-    });
-
-    img.addEventListener('mouseleave',function(){
-        img.src = orgSrc
-    });
-});
-
-
 ///////////////////////////////// PSEUDO DATABASE /////////////////////////////////
 
-let allProducts ={
+// We have written our database here in two ways, but due to the difficulty of working with the first method, the second method is used during the project.
 
-    headphone:{
+// let allProducts ={
 
-        earphone:[
-            {id: 'T29PTWSBluetoothEarphone', title: 'T29P TWS Bluetooth Earphone', price: 1000000, img1:'./assets/images/products/headphone/earphone/T29P TWS Bluetooth Earphone/T29P TWS Bluetooth Earphone1.jpg', img2:'./assets/images/products/headphone/earphone/T29P TWS Bluetooth Earphone/T29P TWS Bluetooth Earphone2.jpg', img3:'./assets/images/products/headphone/earphone/T29P TWS Bluetooth Earphone/T29P TWS Bluetooth Earphone3.jpg', count: 1, },
+//     headphone:{
 
-            {id: 'T36TWSStereoEarbuds', title: 'T36 TWS Stereo Earbuds', price: 1200000, img1:'./assets/images/products/headphone/earphone/T36 TWS Stereo Earbuds/T36 TWS Stereo Earbuds1.jpg', img2:'./assets/images/products/headphone/earphone/T36 TWS Stereo Earbuds/T36 TWS Stereo Earbuds2.jpg', img3:'./assets/images/products/headphone/earphone/T36 TWS Stereo Earbuds/T36 TWS Stereo Earbuds3.jpg', count: 1,},
+//         earphone:[
+//             {id: 1, 
+//             title: 'T29P TWS Bluetooth Earphone', 
+//             price: 1000000, img1:'./assets/images/products/headphone/earphone/T29P TWS Bluetooth Earphone/T29P TWS Bluetooth Earphone1.jpg', 
+//             img2:'./assets/images/products/headphone/earphone/T29P TWS Bluetooth Earphone/T29P TWS Bluetooth Earphone2.jpg', 
+//             img3:'./assets/images/products/headphone/earphone/T29P TWS Bluetooth Earphone/T29P TWS Bluetooth Earphone3.jpg', 
+//             count: 1, 
+//             address: 'T29P-TWS-Bluetooth-Earphone',},
 
-            {id: 'T55BluetoothEarphone', title: 'T55 Bluetooth Earphone', price: 990000, img1:'./assets/images/products/headphone/earphone/T55 Bluetooth Earphone/T55 Bluetooth Earphone1.jpg', img2:'./assets/images/products/headphone/earphone/T55 Bluetooth Earphone/T55 Bluetooth Earphone2.jpg', img3:'./assets/images/products/headphone/earphone/T55 Bluetooth Earphone/T55 Bluetooth Earphone3.jpg', count: 1,},
+//             {id: 2, 
+//             title: 'T36 TWS Stereo Earbuds', 
+//             price: 1200000, 
+//             img1:'./assets/images/products/headphone/earphone/T36 TWS Stereo Earbuds/T36 TWS Stereo Earbuds1.jpg', 
+//             img2:'./assets/images/products/headphone/earphone/T36 TWS Stereo Earbuds/T36 TWS Stereo Earbuds2.jpg', 
+//             img3:'./assets/images/products/headphone/earphone/T36 TWS Stereo Earbuds/T36 TWS Stereo Earbuds3.jpg', 
+//             count: 1,
+//             address: 'T36-TWS-Stereo-Earbuds',},
 
-            {id: 'T55BluetoothEarphone', title: 'T55 Bluetooth Earphone', price: 1500000, img1:'./assets/images/products/headphone/earphone/TA3 TWS ANC Earbuds/TA3 TWS ANC Earbuds1.jpg', img2:'./assets/images/products/headphone/earphone/TA3 TWS ANC Earbuds/TA3 TWS ANC Earbuds2.jpg', count: 1,},
-        ],
+//             {id: 3, 
+//             title: 'T55 Bluetooth Earphone', 
+//             price: 990000, 
+//             img1:'./assets/images/products/headphone/earphone/T55 Bluetooth Earphone/T55 Bluetooth Earphone1.jpg', 
+//             img2:'./assets/images/products/headphone/earphone/T55 Bluetooth Earphone/T55 Bluetooth Earphone2.jpg', 
+//             img3:'./assets/images/products/headphone/earphone/T55 Bluetooth Earphone/T55 Bluetooth Earphone3.jpg', 
+//             count: 1,
+//             address: 'T55-Bluetooth-Earphone',},
 
-        gaming:[
-            {id: 'A710BLBluetoothHeadset', title: 'A710BL Bluetooth Headset', price: 9500000, img1:'./assets/images/products/headphone/gaming/A710BL Bluetooth Headset/A710BL Bluetooth Headset1.jpg', img2:'./assets/images/products/headphone/gaming/A710BL Bluetooth Headset/A710BL Bluetooth Headset2.jpg', img3:'./assets/images/products/headphone/gaming/A710BL Bluetooth Headset/A710BL Bluetooth Headset3.jpg', count: 1, },
 
-            {id: 'ES-770iBluetoothHeadset', title: 'ES-770i Bluetooth Headset', price: 2100000, img1:'./assets/images/products/headphone/gaming/ES-770i Bluetooth Headset/ES-770i Bluetooth Headset1.jpg', img2:'./assets/images/products/headphone/gaming/ES-770i Bluetooth Headset/ES-770i Bluetooth Headset2.jpg', count: 1, },
-        ],
-    },
+//             {id: 4, 
+//             title: 'T55 Bluetooth Earphone', 
+//             price: 1500000, img1:'./assets/images/products/headphone/earphone/TA3 TWS ANC Earbuds/TA3 TWS ANC Earbuds1.jpg', 
+//             img2:'./assets/images/products/headphone/earphone/TA3 TWS ANC Earbuds/TA3 TWS ANC Earbuds2.jpg', 
+//             count: 1,
+//             address: 'TA3-TWS-ANC-Earbuds',},
+//         ],
 
-    speaker:{
+//         gaming:[
+//             {id: 5, 
+//             title: 'A710BL Bluetooth Headset', 
+//             price: 9500000, 
+//             img1:'./assets/images/products/headphone/gaming/A710BL Bluetooth Headset/A710BL Bluetooth Headset1.jpg', 
+//             img2:'./assets/images/products/headphone/gaming/A710BL Bluetooth Headset/A710BL Bluetooth Headset2.jpg', 
+//             img3:'./assets/images/products/headphone/gaming/A710BL Bluetooth Headset/A710BL Bluetooth Headset3.jpg', 
+//             count: 1, 
+//             address: 'A710BL-Bluetooth-Headset',},
 
-        protable:[
-            {id: 'Y280BluetoothSpeaker', title: 'Y280 Bluetooth Speaker', price: 1800000, img1:'./assets/images/products/speaker/protable/Y280 Bluetooth Speaker/Y280 Bluetooth Speaker1.jpg', img2:'./assets/images/products/speaker/protable/Y280 Bluetooth Speaker/Y280 Bluetooth Speaker2.jpg', img3:'./assets/images/products/speaker/protable/Y280 Bluetooth Speaker/Y280 Bluetooth Speaker3.jpg', count: 1,},
+//             {id: 6, 
+//             title: 'ES-770i Bluetooth Headset', 
+//             price: 2100000, 
+//             img1:'./assets/images/products/headphone/gaming/ES-770i Bluetooth Headset/ES-770i Bluetooth Headset1.jpg', 
+//             img2:'./assets/images/products/headphone/gaming/ES-770i Bluetooth Headset/ES-770i Bluetooth Headset2.jpg', 
+//             count: 1, 
+//             address: 'ES-770i-Bluetooth-Headset',},
+//         ],
+//     },
 
-            {id: 'Y668BluetoothSpeaker', title: 'Y668 Bluetooth Speaker', price: 1700000, img1:'./assets/images/products/speaker/protable/Y668 Bluetooth Speaker/Y668 Bluetooth Speaker1.jpg', img2:'./assets/images/products/speaker/protable/Y668 Bluetooth Speaker/Y668 Bluetooth Speaker2.jpg', img3:'./assets/images/products/speaker/protable/Y668 Bluetooth Speaker/Y668 Bluetooth Speaker3.jpg', count: 1,},
+//     speaker:{
 
-            {id: 'Y669BluetoothSpeaker', title: 'Y669 Bluetooth Speaker', price: 2500000, img1:'./assets/images/products/speaker/protable/Y669 Bluetooth Speaker/Y669 Bluetooth Speaker1.jpg', img2:'./assets/images/products/speaker/protable/Y669 Bluetooth Speaker/Y669 Bluetooth Speaker2.jpg', img3:'./assets/images/products/speaker/protable/Y669 Bluetooth Speaker/Y669 Bluetooth Speaker3.jpg', count: 1,},
-        ],
+//         protable:[
+//             {id: 7, 
+//             title: 'Y280 Bluetooth Speaker', 
+//             price: 1800000, 
+//             img1:'./assets/images/products/speaker/portable/Y280 Bluetooth Speaker/Y280 Bluetooth Speaker1.jpg', 
+//             img2:'./assets/images/products/speaker/portable/Y280 Bluetooth Speaker/Y280 Bluetooth Speaker2.jpg', 
+//             img3:'./assets/images/products/speaker/portable/Y280 Bluetooth Speaker/Y280 Bluetooth Speaker3.jpg', 
+//             count: 1,
+//             address: 'Y28-Bluetooth-Speaker',},
 
-        sandbar:[
-            {id: 'Y999BluetoothSpeaker', title: 'Y999 Bluetooth Speaker', price: 3200000, img1:'./assets/images/products/speaker/sandbar/Y999 Bluetooth Speaker/Y999 Bluetooth Speaker1.jpg', img2:'./assets/images/products/speaker/sandbar/Y999 Bluetooth Speaker/Y999 Bluetooth Speaker2.jpg', img3:'./assets/images/products/speaker/sandbar/Y999 Bluetooth Speaker/Y999 Bluetooth Speaker3.jpg', count: 1,},
-        ],
-    },
+//             {id: 8, 
+//             title: 'Y668 Bluetooth Speaker', 
+//             price: 1700000, 
+//             img1:'./assets/images/products/speaker/portable/Y668 Bluetooth Speaker/Y668 Bluetooth Speaker1.jpg', 
+//             img2:'./assets/images/products/speaker/portable/Y668 Bluetooth Speaker/Y668 Bluetooth Speaker2.jpg', 
+//             img3:'./assets/images/products/speaker/portable/Y668 Bluetooth Speaker/Y668 Bluetooth Speaker3.jpg', 
+//             count: 1,
+//             address: 'Y668-Bluetooth-Speaker',},
 
-};
+//             {id: 9, 
+//             title: 'Y669 Bluetooth Speaker', 
+//             price: 2500000, 
+//             img1:'./assets/images/products/speaker/portable/Y669 Bluetooth Speaker/Y669 Bluetooth Speaker1.jpg', 
+//             img2:'./assets/images/products/speaker/portable/Y669 Bluetooth Speaker/Y669 Bluetooth Speaker2.jpg', 
+//             img3:'./assets/images/products/speaker/portable/Y669 Bluetooth Speaker/Y669 Bluetooth Speaker3.jpg', 
+//             count: 1,
+//             address: 'Y669-Bluetooth-Speaker',},
+//         ],
+
+//         sandbar:[
+//             {id: 10, 
+//             title: 'Y999 Bluetooth Speaker', 
+//             price: 3200000, 
+//             img1:'./assets/images/products/speaker/sandbar/Y999 Bluetooth Speaker/Y999 Bluetooth Speaker1.jpg', 
+//             img2:'./assets/images/products/speaker/sandbar/Y999 Bluetooth Speaker/Y999 Bluetooth Speaker2.jpg', 
+//             img3:'./assets/images/products/speaker/sandbar/Y999 Bluetooth Speaker/Y999 Bluetooth Speaker3.jpg', 
+//             count: 1, 
+//             address: 'Y999-Bluetooth-Speaker',},
+//         ],
+//     },
+// };
+
+// second way
+
+let allProducts =[
+        {id: 1, 
+        title: 'T29P TWS Bluetooth Earphone', 
+        price: 1000000, img1:'./assets/images/products/headphone/earphone/T29P TWS Bluetooth Earphone/T29P TWS Bluetooth Earphone1.jpg', 
+        img2:'./assets/images/products/headphone/earphone/T29P TWS Bluetooth Earphone/T29P TWS Bluetooth Earphone2.jpg', 
+        img3:'./assets/images/products/headphone/earphone/T29P TWS Bluetooth Earphone/T29P TWS Bluetooth Earphone3.jpg', 
+        count: 1, 
+        address: 'T29P-TWS-Bluetooth-Earphone',
+        category: 'هدفون',
+        subCategory: 'ایرفون',},
+
+        {id: 2, 
+        title: 'T36 TWS Stereo Earbuds', 
+        price: 1200000, 
+        img1:'./assets/images/products/headphone/earphone/T36 TWS Stereo Earbuds/T36 TWS Stereo Earbuds1.jpg', 
+        img2:'./assets/images/products/headphone/earphone/T36 TWS Stereo Earbuds/T36 TWS Stereo Earbuds2.jpg', 
+        img3:'./assets/images/products/headphone/earphone/T36 TWS Stereo Earbuds/T36 TWS Stereo Earbuds3.jpg', 
+        count: 1,
+        address: 'T36-TWS-Stereo-Earbuds',
+        category: 'هدفون',
+        subCategory: 'ایرفون',},
+
+        {id: 3, 
+        title: 'T55 Bluetooth Earphone', 
+        price: 990000, 
+        img1:'./assets/images/products/headphone/earphone/T55 Bluetooth Earphone/T55 Bluetooth Earphone1.jpg', 
+        img2:'./assets/images/products/headphone/earphone/T55 Bluetooth Earphone/T55 Bluetooth Earphone2.jpg', 
+        img3:'./assets/images/products/headphone/earphone/T55 Bluetooth Earphone/T55 Bluetooth Earphone3.jpg', 
+        count: 1,
+        address: 'T55-Bluetooth-Earphone',
+        category: 'هدفون',
+        subCategory: 'ایرفون',},
+
+
+        {id: 4, 
+        title: 'T55 Bluetooth Earphone', 
+        price: 1500000, img1:'./assets/images/products/headphone/earphone/TA3 TWS ANC Earbuds/TA3 TWS ANC Earbuds1.jpg', 
+        img2:'./assets/images/products/headphone/earphone/TA3 TWS ANC Earbuds/TA3 TWS ANC Earbuds2.jpg', 
+        count: 1,
+        address: 'TA3-TWS-ANC-Earbuds',
+        category: 'هدفون',
+        subCategory: 'ایرفون',},
+
+
+        {id: 5, 
+        title: 'A710BL Bluetooth Headset', 
+        price: 9500000, 
+        img1:'./assets/images/products/headphone/gaming/A710BL Bluetooth Headset/A710BL Bluetooth Headset1.jpg', 
+        img2:'./assets/images/products/headphone/gaming/A710BL Bluetooth Headset/A710BL Bluetooth Headset2.jpg', 
+        img3:'./assets/images/products/headphone/gaming/A710BL Bluetooth Headset/A710BL Bluetooth Headset3.jpg', 
+        count: 1, 
+        address: 'A710BL-Bluetooth-Headset',
+        category: 'هدفون',
+        subCategory: 'گیمینگ',},
+
+
+        {id: 6, 
+        title: 'ES-770i Bluetooth Headset', 
+        price: 2100000, 
+        img1:'./assets/images/products/headphone/gaming/ES-770i Bluetooth Headset/ES-770i Bluetooth Headset1.jpg', 
+        img2:'./assets/images/products/headphone/gaming/ES-770i Bluetooth Headset/ES-770i Bluetooth Headset2.jpg', 
+        count: 1, 
+        address: 'ES-770i-Bluetooth-Headset',
+        category: 'هدفون',
+        subCategory: 'گیمینگ',},
+
+
+        {id: 7, 
+        title: 'Y280 Bluetooth Speaker', 
+        price: 1800000, 
+        img1:'./assets/images/products/speaker/portable/Y280 Bluetooth Speaker/Y280 Bluetooth Speaker1.jpg', 
+        img2:'./assets/images/products/speaker/portable/Y280 Bluetooth Speaker/Y280 Bluetooth Speaker2.jpg', 
+        img3:'./assets/images/products/speaker/portable/Y280 Bluetooth Speaker/Y280 Bluetooth Speaker3.jpg', 
+        count: 1,
+        address: 'Y28-Bluetooth-Speaker',
+        category: 'اسپیکر',
+        subCategory: 'قابل حمل',},
+
+        {id: 8, 
+        title: 'Y668 Bluetooth Speaker', 
+        price: 1700000, 
+        img1:'./assets/images/products/speaker/portable/Y668 Bluetooth Speaker/Y668 Bluetooth Speaker1.jpg', 
+        img2:'./assets/images/products/speaker/portable/Y668 Bluetooth Speaker/Y668 Bluetooth Speaker2.jpg', 
+        img3:'./assets/images/products/speaker/portable/Y668 Bluetooth Speaker/Y668 Bluetooth Speaker3.jpg', 
+        count: 1,
+        address: 'Y668-Bluetooth-Speaker',
+        category: 'اسپیکر',
+        subCategory: 'قابل حمل',},
+
+        {id: 9, 
+        title: 'Y669 Bluetooth Speaker', 
+        price: 2500000, 
+        img1:'./assets/images/products/speaker/portable/Y669 Bluetooth Speaker/Y669 Bluetooth Speaker1.jpg', 
+        img2:'./assets/images/products/speaker/portable/Y669 Bluetooth Speaker/Y669 Bluetooth Speaker2.jpg', 
+        img3:'./assets/images/products/speaker/portable/Y669 Bluetooth Speaker/Y669 Bluetooth Speaker3.jpg', 
+        count: 1,
+        address: 'Y669-Bluetooth-Speaker',
+        category: 'اسپیکر',
+        subCategory: 'قابل حمل',},
+
+        {id: 10, 
+        title: 'Y999 Bluetooth Speaker', 
+        price: 3200000, 
+        img1:'./assets/images/products/speaker/sandbar/Y999 Bluetooth Speaker/Y999 Bluetooth Speaker1.jpg', 
+        img2:'./assets/images/products/speaker/sandbar/Y999 Bluetooth Speaker/Y999 Bluetooth Speaker2.jpg', 
+        img3:'./assets/images/products/speaker/sandbar/Y999 Bluetooth Speaker/Y999 Bluetooth Speaker3.jpg', 
+        count: 1, 
+        address: 'Y999-Bluetooth-Speaker',
+        category: 'اسپیکر',
+        subCategory: 'ساندبار',},
+]
+
+
+
+
+
+
+
+
 
 
 
 
 // SPEAKER PREVIEW SECTION
 
-let productPreviewHeadphone = $.querySelector("#product-preview-headphone")
+let productPreviewHeadphone = document.querySelector("#product-preview-headphone")
 let gamingProductLoadSpeed = 1800
 
 allProducts.headphone.gaming.forEach(function(gamingProduct){
@@ -89,5 +258,29 @@ allProducts.headphone.earphone.forEach(function(earphoneProduct){
     earphoneProductCounter++
 });
 
+
+
+
+// Set the another img for cards by hover
+
+let productCardImg = document.querySelectorAll('.product-img');
+
+productCardImg.forEach(function(img){
+
+    let orgSrc = img.src;
+
+
+
+    let newSrc = orgSrc.length
+    img.addEventListener('mouseenter',function(){
+            // img.src = newSrc
+            console.log(newSrc[x])
+        });
+        
+    img.addEventListener('mouseleave',function(){
+            img.src = orgSrc
+    });
+        console.log(newSrc[x])
+});
 
 
