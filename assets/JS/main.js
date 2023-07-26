@@ -166,58 +166,35 @@ speakerPreview.forEach(function(product){
 
 // SPEAKER PREVIEW SECTION (end)
 
+// HOVER EFFECT OF PRODUCT PREVIEW PHOTOS (start)
 
 let productCardImgPreview = document.querySelectorAll('.product-img');
-let orgImg ;
-let x = [];
+let orgImg;
+let targetProduct;
 
 productCardImgPreview.forEach(function(img){
     
     img.addEventListener('mouseenter',function(){
         orgImg = img.src
         correctionOrgImg = (orgImg.replace('file:///C:/Users/imfac/Desktop/Awei%20Store','.')).trim()
-        console.log(correctionOrgImg)
-        x = allProducts.filter(function(targetImg){
+        // by this part we found a product that has been hovered by the user
+
+        targetProduct = allProducts.find(function(targetImg){
             return correctionOrgImg == targetImg.img1
         });
-        console.log(x)    
+        // this part is for make some tranisition
+
+        setTimeout(function(){
+           img.src = targetProduct.img2
+        },200);
     });
         
     img.addEventListener('mouseleave',function(){
+
+        setTimeout(function(){
+            img.src = correctionOrgImg
+         },200);
     });
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Set the another img for cards by hove
-
-
+// HOVER EFFECT OF PRODUCT PREVIEW PHOTOS (end)
