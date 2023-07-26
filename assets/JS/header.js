@@ -84,27 +84,27 @@ let header = `
                 <div class="menu">
                     <ul class="menu__box">
                         <li class="menu__box__items">
-                            <a class="menu__box__items__link " href="">پاور بانک</a>
+                            <a class="menu__box__items__link" href="./store.html?id=پاور-بانک">پاور بانک</a>
                         </li>
 
                         <li class="menu__box__items
                         menu__box__items__dropdown">
                         
-                            <a class="menu__box__items__link menu__box__items__link--dot                               menu__box__items__link--dropdown" id="" href=""> 
-                                <span>هدفون</span>
+                        <a class="menu__box__items__link menu__box__items__link--dot                               menu__box__items__link--dropdown" id="" href="./store.html?id=هدفون"> 
+                        <span>هدفون</span>
                                 
                             </a>
                             <div class="dropdown-menu__box">
                                 <div class="container"> 
                                     <ul class="col">
                                         <li class="row dropdown-menu__box__item">
-                                            <a class="dropdown-menu__box__item--link" href="">ایرفون</a>
+                                            <a class="dropdown-menu__box__item--link" href="./store.html?id=ایرفون">ایرفون</a>
                                         </li>
                                         <li class="row dropdown-menu__box__item">
-                                            <a class="dropdown-menu__box__item--link" href="">گیمینگ</a>
+                                            <a class="dropdown-menu__box__item--link" href="./store.html?id=گیمینگ">گیمینگ</a>
                                         </li>
                                         <li class="row dropdown-menu__box__item">
-                                            <a class="dropdown-menu__box__item--link" href="">ورزشی</a>
+                                            <a class="dropdown-menu__box__item--link" href="./store.html?id=ورزشی">ورزشی</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -112,22 +112,22 @@ let header = `
                         </li>
 
                         <li class="menu__box__items menu__box__items__dropdown">
-                            <a class="menu__box__items__link menu__box__items__link--dropdown" href="">اسپیکر
+                            <a class="menu__box__items__link menu__box__items__link--dropdown" href="./store.html?id=اسپیکر">اسپیکر
                             </a>
                             <div class="dropdown-menu__box">
                                 <div class="container">
                                     <ul class="col">
                                         <li class="row dropdown-menu__box__item">
-                                            <a class="dropdown-menu__box__item--link" href=""> قابل حمل</a>
+                                            <a class="dropdown-menu__box__item--link" href="./store.html?id=قابل-حمل"> قابل حمل</a>
                                         </li>
                                         <li class="row dropdown-menu__box__item">
-                                            <a class="dropdown-menu__box__item--link" href="">خانگی</a>
+                                            <a class="dropdown-menu__box__item--link" href="./store.html?id=خانگی">خانگی</a>
                                         </li>
                                         <li class="row dropdown-menu__box__item">
-                                            <a class="dropdown-menu__box__item--link" href="">ساند بار</a>
+                                            <a class="dropdown-menu__box__item--link" href="./store.html?id=ساندبار">ساندبار</a>
                                         </li>
                                         <li class="row dropdown-menu__box__item">
-                                            <a class="dropdown-menu__box__item--link" href="">اجرای زنده</a>
+                                            <a class="dropdown-menu__box__item--link" href="./store.html?id=اجرای-زنده">اجرای زنده</a>
                                         </li>
 
                                     </ul>
@@ -136,7 +136,7 @@ let header = `
                         </li>
 
                         <li class="menu__box__items">
-                            <a class="menu__box__items__link " href="./store.html">فروشگاه</a>
+                            <a class="menu__box__items__link " href="./store.html?id=فروشگاه">فروشگاه</a>
                         </li>
 
                         <li class="menu__box__items">
@@ -234,8 +234,8 @@ let header = `
         <p class="sideNav__cart__empty-cart__alert">
             هیچ محصولی در سبد خرید نیست.
         </p>
-        <a href="./store.html" class="back__store">
-            بازگشت به فروشگاه
+        <a href="./store.html?id=فروشگاه" class="back__store">
+        بازگشت به فروشگاه
         </a>
     </div>
 

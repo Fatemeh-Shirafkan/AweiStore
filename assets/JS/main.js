@@ -74,7 +74,7 @@ let allProducts =[
         count: 1,
         address: 'Y28-Bluetooth-Speaker',
         category: 'اسپیکر',
-        subCategory: 'قابل حمل',},
+        subCategory: 'قابل-حمل',},
 
         {id: 8, 
         title: 'Y668 Bluetooth Speaker', 
@@ -85,7 +85,7 @@ let allProducts =[
         count: 1,
         address: 'Y668-Bluetooth-Speaker',
         category: 'اسپیکر',
-        subCategory: 'قابل حمل',},
+        subCategory: 'قابل-حمل',},
 
         {id: 9, 
         title: 'Y669 Bluetooth Speaker', 
@@ -96,7 +96,7 @@ let allProducts =[
         count: 1,
         address: 'Y669-Bluetooth-Speaker',
         category: 'اسپیکر',
-        subCategory: 'قابل حمل',},
+        subCategory: 'قابل-حمل',},
 
         {id: 10, 
         title: 'Y330 Bluetooth Speaker', 
@@ -107,7 +107,7 @@ let allProducts =[
         count: 1,
         address: 'Y330-Bluetooth-Speaker',
         category: 'اسپیکر',
-        subCategory: 'قابل حمل',},    
+        subCategory: 'قابل-حمل',},    
 
         {id: 11, 
         title: 'Y999 Bluetooth Speaker', 
@@ -174,8 +174,8 @@ let targetProduct;
 
 productCardImgPreview.forEach(function(img){
     
-    img.addEventListener('mouseenter',function(){
-        orgImg = img.src
+    img.addEventListener('mouseenter',function(e){
+        orgImg = e.target.src
         correctionOrgImg = (orgImg.replace('file:///C:/Users/imfac/Desktop/Awei%20Store','.')).trim()
         // by this part we found a product that has been hovered by the user
 
@@ -186,15 +186,20 @@ productCardImgPreview.forEach(function(img){
 
         setTimeout(function(){
            img.src = targetProduct.img2
-        },200);
+        },150);
     });
-        
+
     img.addEventListener('mouseleave',function(){
 
         setTimeout(function(){
             img.src = correctionOrgImg
-         },200);
+         },150);
     });
+
+    orgImg = ''
+    targetProduct = ''
+    correctionOrgImg = ''
+    
 });
 
 // HOVER EFFECT OF PRODUCT PREVIEW PHOTOS (end)
