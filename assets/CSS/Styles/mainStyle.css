@@ -826,6 +826,7 @@ img{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    min-height: 43px;
 }
 
 .product__card__previous-price{
