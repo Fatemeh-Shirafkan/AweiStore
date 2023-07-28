@@ -56,3 +56,15 @@
 .product-status__item:hover{
     color: var(--hover);
 }
+
+/* EMPTY STORE ALERT */
+
+.empty-store-alert{
+    background: #FF971D;
+    border-radius: 8px;
+    padding: 10px;
+    color: antiquewhite;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 10px;
+}

@@ -154,7 +154,7 @@ storeProduct = allProducts.filter(function(product){
 
 if(storeProduct.length === 0){
 
-    console.log('empty')
+    storeProductContainer.insertAdjacentHTML('afterbegin','<div class="empty-store-alert"><span>هیچ محصولی یافت نشد ! </span></div>')
 
 }else{
     storeProduct.forEach(function(product){
