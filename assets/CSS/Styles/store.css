@@ -57,6 +57,14 @@
     color: var(--hover);
 }
 
+.product-status__item.active{
+    color: var(--hover);
+}
+
+.product-status__item.active.product-status__item::before{
+    border: 1px solid var(--hover);
+}
+
 /* EMPTY STORE ALERT */
 
 .empty-store-alert{
