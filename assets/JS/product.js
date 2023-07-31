@@ -185,14 +185,14 @@ function percentage(product){
     return finalPrice.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 };
 
-// CREATE , BETWEEN PRICES
+// SET , BETWEEN PRICES
 
 function priceConversion(number){
     number += ''
     return number.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 };
 
-// ADD IMAGES PRODUCT TO DOCUMENT
+// ADD IMAGES PRODUCT TO DOM
 
 let productImages = document.querySelector('.product__imgages');
 
