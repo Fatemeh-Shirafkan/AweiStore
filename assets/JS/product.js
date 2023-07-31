@@ -159,6 +159,12 @@ breadCrumbTargetProduct.innerHTML ="/ " + targetProduct.title;
 breadCrumbCategory.setAttribute("href","./store.html?id=" + targetProduct.category );
 breadCrumbSubCategory.setAttribute("href","./store.html?id=" + targetProduct.subCategory );
 
+// CHANGE THE TITLE
+
+let productTitle = document.querySelector('.product__title');
+productTitle.innerHTML = targetProduct.title
+
+
 // PRODUCT IMG HOVER FEATURE 
 
 let productImgBox = document.querySelector('.product__img');
@@ -178,20 +184,33 @@ productImgBox.addEventListener('mouseleave', function(){
 });
 
 addProductInterest.addEventListener('click', function(){
-    addProductInterestIcon.classList.toggle('add__product__interest-active')
+    addProductInterestIcon.classList.toggle('add__product__interest-active');
 });
 
+// ADD PRICE FOR PRODUCT
 
+let productBox = document.querySelector('.product__price');
 
+if(targetProduct.discount == 0){
+    productBox.insertAdjacentHTML('afterbegin','<bdi class="product__price-new">' + priceConversion(targetProduct.price) + ' &nbsp;<span class="">تومان</span></bdi>');
+}else{
+    productBox.insertAdjacentHTML('afterbegin','<del class="product__price-old">' + percentage(targetProduct) + '&nbsp;<span class="">تومان</span></del><bdi class="product__price-new">' + priceConversion(targetProduct.price) + ' &nbsp;<span class="">تومان</span></bdi>');
+};
 
+// CALCULATE THE PERCENTAGE
 
+function percentage(product){
+    let finalPrice = product.price * product.discount / 100
+    finalPrice += ''
+    return finalPrice.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};
 
+// CREATE , BETWEEN PRICES
 
-
-
-
-
-
+function priceConversion(number){
+    number += ''
+    return number.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};
 
 
 
