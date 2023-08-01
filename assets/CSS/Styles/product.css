@@ -374,7 +374,7 @@
 
 /* RELATED PRODUCT styles */
 
-.related__product{
+.related__product__title{
     font-size: 1.6rem;
     font-weight: 600;
     color: var(--second);

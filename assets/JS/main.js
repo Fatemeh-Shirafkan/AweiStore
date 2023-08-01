@@ -116,16 +116,16 @@ let allProducts =[
 // HEADPHONE PREVIEW SECTION
 
 let headphoneProductPreview = document.querySelector('#product-preview-headphone');
-let headphonePreviewCountter = 0;
+let headphonePreviewCounter = 0;
 let headphonePreviewLoadSpeed = 3000; 
 
 let headphonePreview = [];
 
 headphonePreview = allProducts.filter (function(product){
-    if(headphonePreviewCountter >= 5){
+    if(headphonePreviewCounter >= 5){
         return
     }
-    headphonePreviewCountter++
+    headphonePreviewCounter++
     return product.category == 'هدفون'
 });
 console.log(headphonePreview);
