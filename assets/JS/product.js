@@ -174,7 +174,7 @@ let productBox = document.querySelector('.product__price');
 if(targetProduct.discount == 0){
     productBox.insertAdjacentHTML('afterbegin','<bdi class="product__price-new">' + priceConversion(targetProduct.price) + ' &nbsp;<span class="">تومان</span></bdi>');
 }else{
-    productBox.insertAdjacentHTML('afterbegin','<del class="product__price-old">' + percentage(targetProduct) + '&nbsp;<span class="">تومان</span></del><bdi class="product__price-new">' + priceConversion(targetProduct.price) + ' &nbsp;<span class="">تومان</span></bdi>');
+    productBox.insertAdjacentHTML('afterbegin','<del class="product__price-old">' + priceConversion(targetProduct.price) + '&nbsp;<span class="">تومان</span></del><bdi class="product__price-new">' + percentage(targetProduct) + ' &nbsp;<span class="">تومان</span></bdi>');
 };
 
 // CALCULATE THE PERCENTAGE
@@ -235,17 +235,18 @@ let counter = 0;
 let relatedProduct ;
 
 relatedProduct = allProducts.filter(function(product){
-    if(counter >= 5){
-        return
-    }
-    counter++
-
-    return product.category == targetProduct.category; 
+    return targetProduct.category == product.category; 
 });
 
 let ralatedProductBox = document.querySelector('.related__product__box');
 
 relatedProduct.forEach(function(product){
+
+    if(counter == 5){
+        return
+    }
+    counter++
+
     if(product.discount == 0){
         noDiscountProduct(product);
     }else{
@@ -265,4 +266,105 @@ function discountProduct(product){
 // DESCRIPTION TITLE
 
 let descriptionTitle = document.querySelector('.content__wrapper__description__feature');
-descriptionTitle.innerHTML = targetProduct.title
+descriptionTitle.innerHTML = targetProduct.title;
+
+////////////////////////////////////// ADD PRODUCT TO CART //////////////////////////////////////
+
+let addProductBtn = document.querySelector('.add__product__cart');
+let sideNavcartEmptyAlert = document.querySelector('.sideNav__cart__empty-cart');
+let sideNavCartBox = document.querySelector('.sideNav__cart__list');
+let sideNavCartBoxList = document.querySelector('.sideNav__cart__list__ul');
+let productCount = document.querySelector('.product__count');
+let productArray = [];
+let duplicateItem ;
+
+addProductBtn.addEventListener('click',function(event){
+    event.preventDefault();
+    productArray.push(targetProduct);
+    setLocalItems(productArray)
+    checkArray(productArray);
+});
+
+// Set Products In Localstorage
+
+function setLocalItems (productArray){
+    localStorage.setItem('cart',JSON.stringify(productArray));
+};
+
+// Check Empty Array
+
+function checkArray(productArray){
+
+    duplicateItemHandeler (productArray)
+    
+    if(productArray.length == 0){
+        emptyAlert();
+    }else{
+        cartGenerator();
+    };
+};
+
+// Check Duplicate Item
+// this section is for when the user click twice on the buy button of a product
+
+function duplicateItemHandeler (productArray){
+    productArray = JSON.parse(localStorage.getItem('cart'));
+
+    duplicateItem = productArray.filter(function(product){
+        return targetProduct.id == product.id
+    });
+
+    if(duplicateItem.length >= 2){
+        productArray = productArray.filter(function(product){
+            return targetProduct.id !== product.id
+        });
+        productArray.push(targetProduct);
+        setLocalItems (productArray)
+    };
+};
+
+
+
+function emptyAlert(){
+    sideNavcartEmptyAlert.style.display = 'flex';
+};
+
+function cartGenerator(){
+    sideNavcartEmptyAlert.style.display = 'none';
+    sideNavCartBox.style.display = 'block';
+
+    sideNavCartBoxList.innerHTML = ""
+    productArray = JSON.parse(localStorage.getItem('cart'));
+
+    productArray.forEach(function(product){
+        // without discount 
+        if(product.discount == 0){
+            sideNavCartBoxList.insertAdjacentHTML('afterbegin','<li class="sideNav__cart__list__ul__item"><a href="#" class="sideNav__cart__list__ul__item__product-img"><img width="90px" height="100px" src="' + product.images[0] + '" alt=""></a><div class="sideNav__cart__list__ul__item__product-info"><a class="sideNav__cart__list__ul__item__product-name" href="">' + product.title +'</a><input onchange=" ' + changeCounterHandeler(product.id) + ' " class="sideNav__cart__list__ul__item__product-quantity" type="number" min="1" max="10" placeholder="1"><span class="sideNav__cart__list__ul__item__product-price"><bdi>' + priceConversion(product.price) + '&nbsp;<span class="">تومان</span></bdi></span></div><a href="#" class="sideNav__cart__list__ul__item--remove"><svg width="15px" height="15px" viewBox="0 0 24 24" fill="none"><path d="M5.293 5.293a1 1 0 0 1 1.414 0L12 10.586l5.293-5.293a1 1 0 1 1 1.414 1.414L13.414 12l5.293 5.293a1 1 0 0 1-1.414 1.414L12 13.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L10.586 12 5.293 6.707a1 1 0 0 1 0-1.414z" fill="#0D0D0D"/></svg></a></li>');
+        }
+        // with discount
+        else{
+            sideNavCartBoxList.insertAdjacentHTML('afterbegin','<li class="sideNav__cart__list__ul__item"><a href="#" class="sideNav__cart__list__ul__item__product-img"><img width="90px" height="100px" src="' + product.images[0] + '" alt=""></a><div class="sideNav__cart__list__ul__item__product-info"><a class="sideNav__cart__list__ul__item__product-name" href="">' + product.title +'</a><input onchange=" ' + changeCounterHandeler(product.id) + ' " class="sideNav__cart__list__ul__item__product-quantity" type="number" min="1" max="10" placeholder="1"><span class="sideNav__cart__list__ul__item__product-price"><bdi>' + percentage(product) + '&nbsp;<span class="">تومان</span></bdi></span></div><a href="#" class="sideNav__cart__list__ul__item--remove"><svg width="15px" height="15px" viewBox="0 0 24 24" fill="none"><path d="M5.293 5.293a1 1 0 0 1 1.414 0L12 10.586l5.293-5.293a1 1 0 1 1 1.414 1.414L13.414 12l5.293 5.293a1 1 0 0 1-1.414 1.414L12 13.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L10.586 12 5.293 6.707a1 1 0 0 1 0-1.414z" fill="#0D0D0D"/></svg></a></li>');
+
+        };
+    });
+};
+
+// Change Count Number
+
+function changeCounterHandeler(m){
+}
+
+//Load Handeler 
+function loadHandeler(productArray){
+
+    productArray = JSON.parse(localStorage.getItem('cart'))
+
+    if(!productArray){
+        productArray = [];
+        emptyAlert();
+    }else{
+        cartGenerator();
+    };
+};
+
+window.addEventListener('load',loadHandeler)

@@ -241,11 +241,11 @@ let header = `
 
     <!-- SIDE CART LIST -->
 
-    <!-- <div class="sideNav__cart__list">
+    <div class="sideNav__cart__list">
         <div  class="sideNav__cart__list__content">
             <ul class="sideNav__cart__list__ul">
 
-                <li class="sideNav__cart__list__ul__item">
+                <!--<li class="sideNav__cart__list__ul__item">
                     <a href="" class="sideNav__cart__list__ul__item__product-img">
                         <img width="90px" height="100px" src="./assets/images/photo1.jpg" alt="">
                     </a>
@@ -263,7 +263,7 @@ let header = `
                         <path d="M5.293 5.293a1 1 0 0 1 1.414 0L12 10.586l5.293-5.293a1 1 0 1 1 1.414 1.414L13.414 12l5.293 5.293a1 1 0 0 1-1.414 1.414L12 13.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L10.586 12 5.293 6.707a1 1 0 0 1 0-1.414z" fill="#0D0D0D"/>    
                         </svg>
                     </a>    
-                </li>
+                </li> -->
 
             </ul>
             <div class="sideNav__cart__list__info">
@@ -281,7 +281,7 @@ let header = `
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 </nav> 
 `;
 
