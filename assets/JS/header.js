@@ -69,7 +69,7 @@ let header = `
                                 </svg>
                             </a> 
                             <div class="cart-count">                               
-                                <span>25</span>
+                                <span id="product-counter">0</span>
                             </div>
                         </div>
                     </div>
@@ -276,8 +276,8 @@ let header = `
                     </span>
                 </div>
                 <div class="sideNav__cart__list__btn">
-                    <a class="sideNav__cart__list__view-cart sideNav__cart__list__btn--style" href="">مشاهده سبد خرید</a>
-                    <a class="sideNav__cart__list__checkout sideNav__cart__list__btn--style" href="">تسویه حساب</a>
+                    <a class="sideNav__cart__list__view-cart sideNav__cart__list__btn--style" href="./cart.html">مشاهده سبد خرید</a>
+                    <a class="sideNav__cart__list__checkout sideNav__cart__list__btn--style" href="#">تسویه حساب</a>
                 </div>
             </div>
         </div>
