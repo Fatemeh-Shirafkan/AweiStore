@@ -270,9 +270,6 @@ let header = `
                 <div class="sideNav__cart__list__total-price">
                     <strong>جمع كل سبد خريد:</strong>
                     <span>
-                        <bdi>2,599,000&nbsp;
-                            <span class="">تومان</span>
-                        </bdi>
                     </span>
                 </div>
                 <div class="sideNav__cart__list__btn">

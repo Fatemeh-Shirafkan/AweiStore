@@ -275,6 +275,7 @@ let sideNavCartBox = document.querySelector('.sideNav__cart__list');
 let sideNavCartBoxList = document.querySelector('.sideNav__cart__list__ul');
 let cartCounterLabel = document.querySelector('#product-counter');
 let productCount = document.querySelector('.product__count');
+let sideNavTotalPriceBox = document.querySelector('.sideNav__cart__list__total-price span');
 let productArray = [];
 let duplicateItem ;
 
@@ -352,6 +353,7 @@ function cartGenerator(){
         removeProductSideNav(product);
     });
     productCounterSideNavHandeler();
+    calcTotalPrice ();
 };
 
 // Product Counter of Side Nav
@@ -385,7 +387,6 @@ function removeProductSideNav(product){
         removeItemHandeler(product.id)
     });
 };
-
 function removeItemHandeler(productID){
     productArray = productArray.filter(function(product){
         return product.id !== productID;
@@ -393,7 +394,25 @@ function removeItemHandeler(productID){
     setLocalItems (productArray);
 };
 
+// Calc total price
 
+function calcTotalPrice () {
+    let totalPriceValue = 0;
+    let discountProduct = 0;
+    let noDiscountProduct = 0;
+    productArray = JSON.parse(localStorage.getItem('cart'));
+
+    productArray.forEach(function(product){
+        if(product.discount == 0){
+            noDiscountProduct += Number(product.count) * product.price;            
+        }else{
+            discountProduct += Number(product.count) * (product.price * product.discount / 100)
+        }
+    });
+    totalPriceValue = discountProduct + noDiscountProduct;
+    sideNavTotalPriceBox.innerHTML = ''
+    sideNavTotalPriceBox.insertAdjacentHTML('afterbegin','<bdi>'+ priceConversion(totalPriceValue) +'&nbsp;<span class="">تومان</span></bdi>');
+};
 
 // LOAD HANDELER
 
