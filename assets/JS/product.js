@@ -283,13 +283,13 @@ addProductBtn.addEventListener('click',function(event){
     targetProduct.count = productCount.value;
     productArray.push(targetProduct);
     setLocalItems(productArray);
-    checkArray(productArray);
 });
 
 // Set Products In Localstorage
 
 function setLocalItems (productArray){
     localStorage.setItem('cart',JSON.stringify(productArray));
+    checkArray(productArray)
 };
 
 // Check Empty Array
@@ -299,6 +299,7 @@ function checkArray(productArray){
     duplicateItemHandeler (productArray)
     
     if(productArray.length == 0){
+        localStorage.clear();
         emptyAlert();
     }else{
         cartGenerator();
@@ -309,7 +310,6 @@ function checkArray(productArray){
 // this section is for when the user click twice on the buy button of a product
 
 function duplicateItemHandeler (productArray){
-    productArray = JSON.parse(localStorage.getItem('cart'));
 
     duplicateItem = productArray.filter(function(product){
         return targetProduct.id == product.id
@@ -325,6 +325,7 @@ function duplicateItemHandeler (productArray){
 };
 
 function emptyAlert(){
+    sideNavCartBox.style.display = 'none';
     sideNavcartEmptyAlert.style.display = 'flex';
 };
 
@@ -342,15 +343,14 @@ function cartGenerator(){
         // without discount 
 
         if(product.discount == 0){
-            sideNavCartBoxList.insertAdjacentHTML('afterbegin','<li class="sideNav__cart__list__ul__item"><a href="./product.html?id=' + product.address + '" class="sideNav__cart__list__ul__item__product-img"><img width="90px" height="100px" src="' + product.images[0] + '" alt=""></a><div class="sideNav__cart__list__ul__item__product-info"><a class="sideNav__cart__list__ul__item__product-name" href="./product.html?id=' + product.address + '">' + product.title +'</a><input class="sideNav__cart__list__ul__item__product-quantity" type="number" min="1" max="10" data-id="'+ product.id +'" value="'+ product.count +'"><span class="sideNav__cart__list__ul__item__product-price"><bdi>' + priceConversion(product.price) + '&nbsp;<span class="">تومان</span></bdi></span></div><a href="#" class="sideNav__cart__list__ul__item--remove"><svg width="15px" height="15px" viewBox="0 0 24 24" fill="none"><path d="M5.293 5.293a1 1 0 0 1 1.414 0L12 10.586l5.293-5.293a1 1 0 1 1 1.414 1.414L13.414 12l5.293 5.293a1 1 0 0 1-1.414 1.414L12 13.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L10.586 12 5.293 6.707a1 1 0 0 1 0-1.414z" fill="#0D0D0D"/></svg></a></li>');
+            sideNavCartBoxList.insertAdjacentHTML('afterbegin','<li class="sideNav__cart__list__ul__item"><a href="./product.html?id=' + product.address + '" class="sideNav__cart__list__ul__item__product-img"><img width="90px" height="100px" src="' + product.images[0] + '" alt=""></a><div class="sideNav__cart__list__ul__item__product-info"><a class="sideNav__cart__list__ul__item__product-name" href="./product.html?id=' + product.address + '">' + product.title +'</a><input class="sideNav__cart__list__ul__item__product-quantity" type="number" min="1" max="10" data-id="'+ product.id +'" value="'+ product.count +'"><span class="sideNav__cart__list__ul__item__product-price"><bdi>' + priceConversion(product.price) + '&nbsp;<span class="">تومان</span></bdi></span></div><a href="#" class="sideNav__cart__list__ul__item--remove"><svg class="sideNav__cart__list__ul__item--remove-btn" width="15px" height="15px" viewBox="0 0 24 24" fill="none"><path d="M5.293 5.293a1 1 0 0 1 1.414 0L12 10.586l5.293-5.293a1 1 0 1 1 1.414 1.414L13.414 12l5.293 5.293a1 1 0 0 1-1.414 1.414L12 13.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L10.586 12 5.293 6.707a1 1 0 0 1 0-1.414z" fill="#0D0D0D"/></svg></a></li>');
         }
         // with discount
-
         else{
-            sideNavCartBoxList.insertAdjacentHTML('afterbegin','<li class="sideNav__cart__list__ul__item"><a href="./product.html?id=' + product.address + '" class="sideNav__cart__list__ul__item__product-img"><img width="90px" height="100px" src="' + product.images[0] + '" alt=""></a><div class="sideNav__cart__list__ul__item__product-info"><a class="sideNav__cart__list__ul__item__product-name" href="./product.html?id=' + product.address + '">' + product.title +'</a><input class="sideNav__cart__list__ul__item__product-quantity" type="number" min="1" max="10" data-id="'+ product.id +'" value="'+ product.count +'"><span class="sideNav__cart__list__ul__item__product-price"><bdi>' + percentage(product) + '&nbsp;<span class="">تومان</span></bdi></span></div><a href="#" class="sideNav__cart__list__ul__item--remove"><svg width="15px" height="15px" viewBox="0 0 24 24" fill="none"><path d="M5.293 5.293a1 1 0 0 1 1.414 0L12 10.586l5.293-5.293a1 1 0 1 1 1.414 1.414L13.414 12l5.293 5.293a1 1 0 0 1-1.414 1.414L12 13.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L10.586 12 5.293 6.707a1 1 0 0 1 0-1.414z" fill="#0D0D0D"/></svg></a></li>');
+            sideNavCartBoxList.insertAdjacentHTML('afterbegin','<li class="sideNav__cart__list__ul__item"><a href="./product.html?id=' + product.address + '" class="sideNav__cart__list__ul__item__product-img"><img width="90px" height="100px" src="' + product.images[0] + '" alt=""></a><div class="sideNav__cart__list__ul__item__product-info"><a class="sideNav__cart__list__ul__item__product-name" href="./product.html?id=' + product.address + '">' + product.title +'</a><input class="sideNav__cart__list__ul__item__product-quantity" type="number" min="1" max="10" data-id="'+ product.id +'" value="'+ product.count +'"><span class="sideNav__cart__list__ul__item__product-price"><bdi>' + percentage(product) + '&nbsp;<span class="">تومان</span></bdi></span></div><a href="#" class="sideNav__cart__list__ul__item--remove"><svg class="sideNav__cart__list__ul__item--remove-btn" width="15px" height="15px" viewBox="0 0 24 24" fill="none"><path d="M5.293 5.293a1 1 0 0 1 1.414 0L12 10.586l5.293-5.293a1 1 0 1 1 1.414 1.414L13.414 12l5.293 5.293a1 1 0 0 1-1.414 1.414L12 13.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L10.586 12 5.293 6.707a1 1 0 0 1 0-1.414z" fill="#0D0D0D"/></svg></a></li>');
         };
+        removeProductSideNav(product);
     });
-
     productCounterSideNavHandeler();
 };
 
@@ -358,7 +358,6 @@ function cartGenerator(){
 
 function productCounterSideNavHandeler(){
     let productCounterSideNav = document.querySelectorAll('.sideNav__cart__list__ul__item__product-quantity');
-    let targetProduct;
     
     productCounterSideNav.forEach(function(item){
         item.addEventListener('change',function(event){
@@ -367,22 +366,32 @@ function productCounterSideNavHandeler(){
     });
 
     function changeCounter (productID ,productCountValue){
-        productArray = JSON.parse(localStorage.getItem('cart'));
-        console.log(productCountValue)
 
         productArray.forEach(function(product){
             if( product.id == productID){
-                console.log(product)
-
-                product.count = productCountValue
+                product.count = productCountValue;
             }
         });
-        setLocalItems (productArray)
+        setLocalItems (productArray);
     };  
 };
 
+// Remove items from sideNav list
 
+function removeProductSideNav(product){
+    let sideNavReemoveBTN = document.querySelector('.sideNav__cart__list__ul__item--remove-btn');
 
+    sideNavReemoveBTN.addEventListener('click',function(){
+        removeItemHandeler(product.id)
+    });
+};
+
+function removeItemHandeler(productID){
+    productArray = productArray.filter(function(product){
+        return product.id !== productID;
+    });
+    setLocalItems (productArray);
+};
 
 
 
@@ -394,7 +403,6 @@ function loadHandeler(productArray){
     productArray = JSON.parse(localStorage.getItem('cart'));
 
     if(!productArray){
-        productArray = [];
         emptyAlert();
     }else{
         cartGenerator();
