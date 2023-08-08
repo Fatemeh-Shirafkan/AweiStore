@@ -55,7 +55,7 @@ let header = `
                                 </svg>
                             </a>
                             <div class="cart-count">                               
-                                <span>5</span>
+                                <span>0</span>
                             </div>
                         </div>
                         <div class="icons-box__item cart-count--parent">
@@ -365,4 +365,3 @@ window.addEventListener('scroll',function(){
     }
         scrollValue = document.documentElement.scrollTop;
 });
-    
