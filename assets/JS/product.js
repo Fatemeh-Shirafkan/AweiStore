@@ -141,6 +141,7 @@ descriptionTitle.innerHTML = targetProduct.title;
 
 let addProductBtn = document.querySelector('.add__product__cart');
 let productCount = document.querySelector('.product__count');
+let productsID = [];
 
 addProductBtn.addEventListener('click',function(event){
     event.preventDefault();

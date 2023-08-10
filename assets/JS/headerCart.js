@@ -120,12 +120,10 @@ let sideNavCartBoxList = document.querySelector('.sideNav__cart__list__ul');
 let cartCounterLabel = document.querySelector('#product-counter');
 let sideNavTotalPriceBox = document.querySelector('.sideNav__cart__list__total-price span');
 let productsArray = [];
-let productsID = [];
-let duplicateItem ;
 
 // Set Products In Localstorage
 
-function setLocalItems (productsArray){
+function setLocalItems(productsArray){
     localStorage.setItem('cart',JSON.stringify(productsArray));
     checkArray(productsArray)
 };
@@ -140,7 +138,7 @@ function checkArray(productsArray){
         localStorage.clear();
         emptyAlert();
     }else{
-        cartGenerator();
+        cardGenerator();
     };
 };
 
@@ -151,7 +149,9 @@ function emptyAlert(){
     sideNavcartEmptyAlert.style.display = 'flex';
 };
 
-function cartGenerator(){
+// Cart Generator
+
+function cardGenerator(){
     sideNavcartEmptyAlert.style.display = 'none';
     sideNavCartBox.style.display = 'block';
 
@@ -173,7 +173,7 @@ function cartGenerator(){
         };
         removeProductSideNav(product);
     });
-    productCounterSideNavHandeler();
+    productCounterHandeler();
     calcTotalPrice ();
 };
 
@@ -214,10 +214,10 @@ function calcTotalPrice () {
 
 // Product Counter Of Side Nav
 
-function productCounterSideNavHandeler(){
-    let productCounterSideNav = document.querySelectorAll('.sideNav__cart__list__ul__item__product-quantity');
+function productCounterHandeler(){
+    let productCounter = document.querySelectorAll('.sideNav__cart__list__ul__item__product-quantity');
     
-    productCounterSideNav.forEach(function(item){
+    productCounter.forEach(function(item){
         item.addEventListener('change',function(event){
             changeCounter(event.target.dataset.id ,event.target.value);
         });
@@ -230,16 +230,16 @@ function productCounterSideNavHandeler(){
                 product.count = productCountValue;
             }
         });
-        setLocalItems (productsArray);
+        setLocalItems(productsArray);
     };  
 };
 
 // Remove Items From SideNav List
 
 function removeProductSideNav(product){
-    let sideNavReemoveBTN = document.querySelector('.sideNav__cart__list__ul__item--remove-btn');
+    let sideNavRemoveBTN = document.querySelector('.sideNav__cart__list__ul__item--remove-btn');
 
-    sideNavReemoveBTN.addEventListener('click',function(){
+    sideNavRemoveBTN.addEventListener('click',function(){
         removeItemHandeler(product.id)
     });
 };
@@ -247,7 +247,7 @@ function removeItemHandeler(productID){
     productsArray = productsArray.filter(function(product){
         return product.id !== productID;
     });
-    setLocalItems (productsArray);
+    setLocalItems(productsArray);
 };
 
 // Load Handeler
@@ -260,6 +260,6 @@ function loadHandeler(productsArray){
     if(!productsArray){
         emptyAlert();
     }else{
-        cartGenerator();
+        cardGenerator();
     };
 };

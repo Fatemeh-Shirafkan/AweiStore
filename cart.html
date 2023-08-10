@@ -19,7 +19,7 @@
 </head>
 <body>
     
-    <!-- TITLE SECTION & BREADCRUMB -->
+<!-- TITLE SECTION & BREADCRUMB -->
 
     <section class="title__section container">
         <div class="row">
@@ -55,7 +55,7 @@
                         </h2>
                     </div>
                     <div class="empty__alert__btn">
-                        <a href="" class="back__store">
+                        <a href="./store.html?id=فروشگاه" class="back__store">
                             بازگشت به فروشگاه
                         </a>
                     </div>
@@ -66,7 +66,7 @@
 
 <!-- TABLE OF USER CART -->
 
-    <section>
+    <section class="cart-page__items">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-8">
@@ -78,63 +78,10 @@
                                 <th class="product-name">محصول</th>
                                 <th class="product-price">قیمت</th>
                                 <th class="product-count">تعداد</th>
-                                <th class="product-subtotal">جمع جزء</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td class="remove-product">
-                                    <a href="#">
-                                        <svg width="18px" height="18px" viewBox="0 0 24 24"         fill="none">
-                                            <path d="M5.293 5.293a1 1 0 0 1 1.414 0L12 10.586l5.293-5.293a1 1 0 1 1 1.414 1.414L13.414 12l5.293 5.293a1 1 0 0 1-1.414 1.414L12 13.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L10.586 12 5.293 6.707a1 1 0 0 1 0-1.414z" fill="#0D0D0D"></path>
-                                        </svg>
-                                    </a>
-                                </td>
-                                <td class="product-img">
-                                    <div>
-                                        <img width="100px" height="200px" src="./assets/images/product1.jpg" alt="">
-                                    </div>
-                                </td>
-                                <td class="product-name">
-                                    <p>	اسپیکر Sony XP700</p>
-                                </td>
-                                <td class="product-price">
-                                    <span>14,700,000 تومان</span>
-                                </td>
-                                <td class="product-count">
-                                    <input class="product__count" type="number" min="1" max="10" placeholder="1">
-                                </td>
-                                <td class="product-subtotal">
-                                    <span>14,700,000 تومان</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="remove-product">
-                                    <a href="#">
-                                        <svg width="18px" height="18px" viewBox="0 0 24 24"         fill="none">
-                                            <path d="M5.293 5.293a1 1 0 0 1 1.414 0L12 10.586l5.293-5.293a1 1 0 1 1 1.414 1.414L13.414 12l5.293 5.293a1 1 0 0 1-1.414 1.414L12 13.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L10.586 12 5.293 6.707a1 1 0 0 1 0-1.414z" fill="#0D0D0D"></path>
-                                        </svg>
-                                    </a>
-                                </td>
-                                <td class="product-img">
-                                    <div>
-                                        <img width="100px" height="200px" src="./assets/images/product1.jpg" alt="">
-                                    </div>
-                                </td>
-                                <td class="product-name">
-                                    <p>	اسپیکر Sony XP700</p>
-                                </td>
-                                <td class="product-price">
-                                    <span>14,700,000 تومان</span>
-                                </td>
-                                <td class="product-count">
-                                    <input class="product__count" type="number" min="1" max="10" placeholder="1">
-                                </td>
-                                <td class="product-subtotal">
-                                    <span>14,700,000 تومان</span>
-                                </td>
-                            </tr>
-
+                        <tbody class="cart-product-table-cards">
+                            
                         </tbody>
                     </table>
                 </div>
@@ -143,7 +90,7 @@
                         <h2 class="total-price__card__title">جمع کل سبد خرید</h2>
                         <div class="total-price__card__box">
                             <span>مجموع</span>
-                            <span>37,897,000 تومان</span>
+                            <span class="cart-page-totalPrice">37,897,000 تومان</span>
                         </div>
                         <div class="total-price__card__proceed-to-checkout">
                             <a class="total-price__card__proceed-to-checkout__btn" href="#">ادامه جهت تسویه حساب</a>
@@ -168,5 +115,8 @@
 
     <!-- HEADER CART js file -->
     <script src="./assets/JS/headerCart.js"></script>
+
+    <!-- Cart Page js file -->
+    <script src="./assets/JS/cartPage.js"></script>
 </body>
 </html>
