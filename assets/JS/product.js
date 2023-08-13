@@ -177,16 +177,20 @@ function cartBHandeler(event){
 
 function checkLocal(ID){
     if(productsArray.length !== 0){
-        productsArray.forEach(function(product){
-            if(product.id == ID){
-                alert('این محصول در سبد خرید شما موجود است.');
-            }else{
-                addHandeler(ID);
-            };
+        productsArray = JSON.parse(localStorage.getItem('cart'));
+        
+        checkForDuplicateProduct = productsArray.filter(function(product){
+            return product.id == ID;
         });
+
+        if(checkForDuplicateProduct.length >= 1){
+            alert('این محصول در سبد خرید شما موجود است.');
+        }else{
+            addHandeler(ID);
+        }
     }else{
         addHandeler(ID);
-    };
+    }
 };
 
 function addHandeler(ID){
@@ -194,7 +198,6 @@ function addHandeler(ID){
     targtProduct = allProducts.find(function(product){
         return ID == product.id;
     });
-    console.log(targtProduct)
     productsArray.push(targtProduct);
     setLocalItems(productsArray);
 };
