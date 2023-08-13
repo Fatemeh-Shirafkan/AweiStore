@@ -50,7 +50,7 @@ function discountProduct(product){
 // Add Product to Cart
 
 function cartBHandeler(event){
-    check(event.target.dataset.id)
+    checkLocal(event.target.dataset.id)
 };
 
 function checkLocal(ID){

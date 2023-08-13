@@ -172,10 +172,24 @@ function duplicateItemHandeler(productsArray){
 // Add Product to Cart
 
 function cartBHandeler(event){
-    addHandeler(event.target.dataset.id);
+    checkLocal(event.target.dataset.id)
 };
+
+function checkLocal(ID){
+    if(productsArray.length !== 0){
+        productsArray.forEach(function(product){
+            if(product.id == ID){
+                alert('این محصول در سبد خرید شما موجود است.');
+            }else{
+                addHandeler(ID);
+            };
+        });
+    }else{
+        addHandeler(ID);
+    };
+};
+
 function addHandeler(ID){
-    console.log(ID)
     let targtProduct;
     targtProduct = allProducts.find(function(product){
         return ID == product.id;
@@ -184,4 +198,3 @@ function addHandeler(ID){
     productsArray.push(targtProduct);
     setLocalItems(productsArray);
 };
-
