@@ -163,7 +163,9 @@ function duplicateItemHandeler(productsArray){
     if(!checkProductsID){
         productsArray.push(targetProduct);
         setLocalItems(productsArray);    
-    };
+    }else{
+        alert('این محصول در سبد خرید شما موجود است.');
+    }
     
 };
 
@@ -182,3 +184,4 @@ function addHandeler(ID){
     productsArray.push(targtProduct);
     setLocalItems(productsArray);
 };
+
