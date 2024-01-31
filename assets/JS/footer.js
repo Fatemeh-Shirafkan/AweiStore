@@ -8,7 +8,7 @@ let footer = `
                 <div class="">
                     <span class="footer__content__title"> درباره فروشگاه
                     </span>
-                    <p class="footer__content__about-us">لورم ایپسوم یا طرح‌نما به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و گرافیک گفته می‌شود.  
+                    <p class="footer__content__about-us">لورم ایپسوم یا طرح‌ نما به متنی آزمایشی و بی‌ معنی در صنعت چاپ، صفحه‌ آرایی و گرافیک گفته می‌شود.  
                     </p>
                 </div>
             </div>
@@ -94,13 +94,13 @@ let footer = `
                     <input class="footer__second-row__form-submit" type="submit" value="ثبت">
                 </form>
             </div>
-            <div class="col-12 col-md-2">
+            <div class="col-12 col-md-4">
                 <div class="trust-symbol">
                     <a href="">
-                        <img src="./assets/images/trust-symbol/Tehranspeaker-eNAMAD-Logo.svg" alt="trust-symbol">
+                        <img width="100" src="./assets/images/trust-symbol/Tehranspeaker-eNAMAD-Logo.svg" alt="trust-symbol">
                     </a>
                     <a href="">
-                        <img src="./assets/images/trust-symbol/Tehranspeaker-Saman-Kish-Logo.svg" alt="trust-symbol">
+                        <img width="100" src="./assets/images/trust-symbol/Tehranspeaker-Saman-Kish-Logo.svg" alt="trust-symbol">
                     </a>
                 </div>
             </div>

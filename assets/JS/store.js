@@ -1,4 +1,4 @@
-    // GET URL LOCATION
+// GET URL LOCATION
 
 let locationSearch = location.search;
 let locationSearchParams = new URLSearchParams(locationSearch);
@@ -56,7 +56,7 @@ function cartBHandeler(event){
 function checkLocal(ID){
     if(productsArray.length !== 0){
         productsArray = JSON.parse(localStorage.getItem('cart'));
-        
+
         checkForDuplicateProduct = productsArray.filter(function(product){
             return product.id == ID;
         });

@@ -2,7 +2,7 @@ let header = `
 <!-- HEADER -->
 <header class="header">
     <div class="header--bg">
-        <div class="container">
+        <div class="container menu-bg">
             <!-- First row -->
             <div class="row justify-content-end">
                 <div class="col">
@@ -14,6 +14,20 @@ let header = `
             <!-- Second row -->
             <nav class="row">
                 <!-- Header logo column -->
+                <div class="col menuBurger">
+                    <div>
+                        <svg width="35px" height="35px" viewBox="0 0 24 24" fill="none">
+                            <g clip-path="url(#clip0_429_11066)">
+                            <path d="M3 6.00092H21M3 12.0009H21M3 18.0009H21" stroke="#292929" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_429_11066">
+                            <rect width="24" height="24" fill="white" transform="translate(0 0.000915527)"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
                 <div class="col">
                     <div class="logo-box">
                         <a href="./mainPage.html">
@@ -22,7 +36,7 @@ let header = `
                     </div>    
                 </div>
                 <!-- Header search box column -->
-                <div class="col-5 align-self-end">
+                <div class="col-xl-5 align-self-end dekstopMenu">
                     <div class="search-box">
                         <form class="search-box__form">
                             <button class="search-box__form__btn" type="submit">
@@ -45,7 +59,7 @@ let header = `
                                 ورود / ثبت نام
                             </span>
                         </div>
-                        <div class="icons-box__item cart-count--parent">
+                        <div class="icons-box__item cart-count--parent favourite-icon">
                             <a href="./interest.html">
                                 <svg fill="#0B1719" width="27px" height="27px" viewBox="0 0 32 32" >
                                 <path class="bentblocks_een" d="M21.081,6C23.752,6.031,26,8.766,26,12c0,5.106-6.47,10.969-10.001,13.593
@@ -77,84 +91,121 @@ let header = `
             </nav>
         </div>
     </div>
-    <!-- Third row (Header navbar) -->
-    <div class="container" id="menu-row">
-        <nav class="row justify-content-center">
-            <div class="col-5">
-                <div class="menu">
-                    <ul class="menu__box">
-                        <li class="menu__box__items">
-                            <a class="menu__box__items__link" href="./store.html?id=پاور-بانک">پاور بانک</a>
-                        </li>
 
-                        <li class="menu__box__items
-                        menu__box__items__dropdown">
-                        
-                        <a class="menu__box__items__link menu__box__items__link--dot                               menu__box__items__link--dropdown" id="" href="./store.html?id=هدفون"> 
-                        <span>هدفون</span>
-                                
-                            </a>
-                            <div class="dropdown-menu__box">
-                                <div class="container"> 
-                                    <ul class="col">
-                                        <li class="row dropdown-menu__box__item">
-                                            <a class="dropdown-menu__box__item--link" href="./store.html?id=ایرفون">ایرفون</a>
-                                        </li>
-                                        <li class="row dropdown-menu__box__item">
-                                            <a class="dropdown-menu__box__item--link" href="./store.html?id=گیمینگ">گیمینگ</a>
-                                        </li>
-                                        <li class="row dropdown-menu__box__item">
-                                            <a class="dropdown-menu__box__item--link" href="./store.html?id=ورزشی">ورزشی</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div> 
-                        </li>
+        <!-- Third row (Header navbar) -->
+    <div>
+        <div class="container">
+            <nav class="row">
+                <div class="col"></div>
+                <div class="col-xl-5 dekstopMenu">
+                    <div class="menu">
+                        <ul class="menu__box">
+                            <li class="menu__box__items">
+                                <a class="menu__box__items__link" href="./store.html?id=پاور-بانک">پاور بانک</a>
+                            </li>
+    
+                            <li class="menu__box__items
+                            menu__box__items__dropdown">
+                            
+                            <a class="menu__box__items__link menu__box__items__link--dot                               menu__box__items__link--dropdown" id="" href="./store.html?id=هدفون"> 
+                            <span>هدفون</span>
+                                    
+                                </a>
+                                <div class="dropdown-menu__box">
+                                    <div class="container"> 
+                                        <ul class="col">
+                                            <li class="row dropdown-menu__box__item">
+                                                <a class="dropdown-menu__box__item--link" href="./store.html?id=ایرفون">ایرفون</a>
+                                            </li>
+                                            <li class="row dropdown-menu__box__item">
+                                                <a class="dropdown-menu__box__item--link" href="./store.html?id=گیمینگ">گیمینگ</a>
+                                            </li>
+                                            <li class="row dropdown-menu__box__item">
+                                                <a class="dropdown-menu__box__item--link" href="./store.html?id=ورزشی">ورزشی</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div> 
+                            </li>
+    
+                            <li class="menu__box__items menu__box__items__dropdown">
+                                <a class="menu__box__items__link menu__box__items__link--dropdown" href="./store.html?id=اسپیکر">اسپیکر
+                                </a>
+                                <div class="dropdown-menu__box">
+                                    <div class="container">
+                                        <ul class="col">
+                                            <li class="row dropdown-menu__box__item">
+                                                <a class="dropdown-menu__box__item--link" href="./store.html?id=قابل-حمل"> قابل حمل</a>
+                                            </li>
+                                            <li class="row dropdown-menu__box__item">
+                                                <a class="dropdown-menu__box__item--link" href="./store.html?id=خانگی">خانگی</a>
+                                            </li>
+                                            <li class="row dropdown-menu__box__item">
+                                                <a class="dropdown-menu__box__item--link" href="./store.html?id=ساندبار">ساندبار</a>
+                                            </li>
+                                            <li class="row dropdown-menu__box__item">
+                                                <a class="dropdown-menu__box__item--link" href="./store.html?id=اجرای-زنده">اجرای زنده</a>
+                                            </li>
+    
+                                        </ul>
+                                    </div>
+                                </div> 
+                            </li>
+    
+                            <li class="menu__box__items">
+                                <a class="menu__box__items__link " href="./store.html?id=فروشگاه">فروشگاه</a>
+                            </li>
+    
+                            <li class="menu__box__items">
+                                <a class="menu__box__items__link menu__box__items__link--dot" href="">تماس با ما</a>
+                            </li>
+    
+                            <li class="menu__box__items">
+                                <a class="menu__box__items__link menu__box__items__link--dot" href="">وبلاگ</a>
+                            </li>
+                        </ul>
+                    </div>    
+                </div>
+                <div class="col">
+                    
+                </div>
+            </nav>
 
-                        <li class="menu__box__items menu__box__items__dropdown">
-                            <a class="menu__box__items__link menu__box__items__link--dropdown" href="./store.html?id=اسپیکر">اسپیکر
-                            </a>
-                            <div class="dropdown-menu__box">
-                                <div class="container">
-                                    <ul class="col">
-                                        <li class="row dropdown-menu__box__item">
-                                            <a class="dropdown-menu__box__item--link" href="./store.html?id=قابل-حمل"> قابل حمل</a>
-                                        </li>
-                                        <li class="row dropdown-menu__box__item">
-                                            <a class="dropdown-menu__box__item--link" href="./store.html?id=خانگی">خانگی</a>
-                                        </li>
-                                        <li class="row dropdown-menu__box__item">
-                                            <a class="dropdown-menu__box__item--link" href="./store.html?id=ساندبار">ساندبار</a>
-                                        </li>
-                                        <li class="row dropdown-menu__box__item">
-                                            <a class="dropdown-menu__box__item--link" href="./store.html?id=اجرای-زنده">اجرای زنده</a>
-                                        </li>
-
-                                    </ul>
-                                </div>
-                            </div> 
-                        </li>
-
-                        <li class="menu__box__items">
-                            <a class="menu__box__items__link " href="./store.html?id=فروشگاه">فروشگاه</a>
-                        </li>
-
-                        <li class="menu__box__items">
-                            <a class="menu__box__items__link menu__box__items__link--dot" href="">تماس با ما</a>
-                        </li>
-
-                        <li class="menu__box__items">
-                            <a class="menu__box__items__link menu__box__items__link--dot" href="">وبلاگ</a>
-                        </li>
-                    </ul>
-                </div>    
-            </div>
-        </nav>
+        </div>
     </div>
 </header>
 
-<!-- SIDE LOGIN NAVIGATION -->
 
+
+<nav class="sideNav__menuBurger open__sideNav__menuBurger">
+    <ul>
+        <li>
+            <a href="">هدفون</a>
+            <ul>
+                <li><a href="">ایرفون</a></li>
+                <li><a href="">گیمینگ</a></li>
+                <li><a href="">ورزشی</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="">اسپیکر</a>
+            <ul>
+                <li><a href=""> قابل حمل</a></li>
+                <li><a href="">خانگی</a></li>
+                <li><a href="">ساندبار</a></li>
+                <li><a href="">اجرای زنده</a></li>
+            </ul>
+        </li>
+        <li><a href="">پاور بانک</a></li>
+        <li><a href="">فروشگاه</a></li>
+        <li><a href="">تماس با ما</a></li>
+        <li><a href="">وبلاگ</a></li>
+    </ul>
+</nav>
+
+
+
+<!-- SIDE LOGIN NAVIGATION -->
 <nav class="sideNav__login" >
     <div class="sideNav__login__heading">
         <span class="sideNav__login__heading__title">ورود</span>
@@ -207,7 +258,6 @@ let header = `
 </nav>
 
 <!-- SIDE CART NAVIGATION -->
-
 <nav class="sideNav__cart">
     <div class="sideNav__cart__header">
         <span class="sideNav__cart__header__title">سبد خرید</span>

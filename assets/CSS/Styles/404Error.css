@@ -2,13 +2,12 @@
     --bg-color: #f7f7f7;
     --fist: #fff;
     --second: #323232;
-    --third: #FEF200;
+    --third: #afd22d;
     --fourth: #d5d5d5;
-    --hover: #dcd207;
+    --hover: #AFD22E;
     --border: rgba(119, 119, 119, 0.2);
     --text: #a5a5a5;
 }
-
 
 /* 404 ERROR CONTENT styles */
 
@@ -22,9 +21,49 @@
 .notFound__content h2{
     color: var(--text);
     font-size: 15rem;
+    user-select: none;
 }
 
 .notFound__content h3{
     font-size: 2.3rem;
-    font-weight: 700;
+    font-weight: 600;
+    user-select: none;
 }
+
+/* Responsive part start */
+@media screen and (max-width: 1024px) {
+    
+    .notFound__content h2{
+        font-size: 12rem;
+    }
+
+    .notFound__content h3{
+        font-size: 1.8rem;
+    }
+    
+}
+
+@media screen and (max-width: 576px) {
+    
+    .notFound__content h2{
+        font-size: 10rem;
+    }
+
+    .notFound__content h3{
+        font-size: 1.5rem;
+    }
+    
+}
+
+@media screen and (max-width: 370px) {
+    
+    .notFound__content h2{
+        font-size: 10rem;
+    }
+
+    .notFound__content h3{
+        font-size: 1.2rem;
+    }
+    
+}
+/* Responsive part end */

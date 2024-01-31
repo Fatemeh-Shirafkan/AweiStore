@@ -1,4 +1,3 @@
-
 // GET URL LOCATION
 
 let locationSearch = location.search;

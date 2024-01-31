@@ -132,7 +132,6 @@ function setLocalItems(productsArray){
 
 function checkArray(productsArray){
 
-    
     if(productsArray.length == 0){
         cartCounterLabel.innerHTML = 0
         localStorage.clear();
