@@ -40,7 +40,7 @@ let header = `
                     <div class="search-box">
                         <form class="search-box__form">
                             <button class="search-box__form__btn" type="submit">
-                                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none"><path d="M10 4a6 6 0 1 0 0 12 6 6 0 0 0 0-12zm-8 6a8 8 0 1 1 14.32 4.906l5.387 5.387a1 1 0 0 1-1.414 1.414l-5.387-5.387A8 8 0 0 1 2 10z" fill="#FFF100"/></svg>
+                                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none"><path d="M10 4a6 6 0 1 0 0 12 6 6 0 0 0 0-12zm-8 6a8 8 0 1 1 14.32 4.906l5.387 5.387a1 1 0 0 1-1.414 1.414l-5.387-5.387A8 8 0 0 1 2 10z" fill="#afd22d"/></svg>
                             </button>
                             <input class="search-box__form__text" type="text" name="" id="" placeholder="دنبال چی میگردی؟!!">
                         </form>

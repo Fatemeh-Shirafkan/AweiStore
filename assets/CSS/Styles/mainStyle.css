@@ -62,6 +62,7 @@ img{
 
 .logo-box{
     margin: 0 0 20px 0;
+    user-select: none;
 }
 
 /* Header search box column styles */
@@ -692,7 +693,7 @@ img{
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background:  #fff315;
+    background:  #AFD22D;
     position: absolute;
     top: 5px;
     right: -23px;
@@ -703,7 +704,7 @@ img{
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: var(--third);
+    background: #c6d490;
     opacity: 0.3;
     position: absolute;
     top: 0;
