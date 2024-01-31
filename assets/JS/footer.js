@@ -4,7 +4,7 @@ let footer = `
 <footer class="footer">
     <div class="container">
         <div class="row footer__first-row">
-            <div class="col-12 col-sm-6 col-lg-3">
+            <div class="col-12 col-sm-8 col-lg-3 mb-4">
                 <div class="">
                     <span class="footer__content__title"> درباره فروشگاه
                     </span>
@@ -12,7 +12,7 @@ let footer = `
                     </p>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-lg-2">
+            <div class="col-12 col-sm-4 col-lg-2 mb-4">
                 <div class="">
                     <span class="footer__content__title"> دسترسی سریع </span>
                     <ul class="footer__content__list">
@@ -31,7 +31,7 @@ let footer = `
                     </ul>
                 </div>
             </div>
-            <div class="col-12 col-sm-4 col-lg-2">
+            <div class="col-12 col-sm-4 col-lg-2 mt-sm-5 mt-md-0 mb-4">
                 <div class="">
                     <span class="footer__content__title"> منوی سفارشی 
                     </span>
@@ -51,7 +51,7 @@ let footer = `
                     </ul>
                 </div>
             </div>
-            <div class="col-12 col-sm-4 col-lg-2">
+            <div class="col-12 col-sm-4 col-lg-2 mt-sm-5 mt-md-0 mb-4">
                 <div class="">
                     <span class="footer__content__title"> راهنمای خرید </span>
                     <ul class="footer__content__list">
@@ -70,7 +70,7 @@ let footer = `
                     </ul>
                 </div>
             </div>
-            <div class="col-12 col-sm-4 col-lg-3">
+            <div class="col-12 col-sm-4 col-lg-3 mt-sm-5 mt-md-0 mb-4">
                 <div class="">
                     <span class="footer__content__title">  اطلاعات تماس</span>
                     <ul class="footer__content__list">
@@ -87,7 +87,7 @@ let footer = `
             </div>
         </div>
         <div class="row footer__second-row">
-            <div class="col-12 col-md-8">
+            <div class="col-12 col-md-8 mb-4 mb-md-0">
                 <span class="footer__second-row__form-title">از تخفیفات awei مطلع شوید</span>
                 <form class="footer__second-row__form" action="">
                     <input class="footer__second-row__form-email" type="email" name="" id="" placeholder=" آدرس ایمیل خود را وارد کنید...">

@@ -1370,4 +1370,31 @@ transform: translateY(-20px);
     .header-number__box__content {
         font-size: 12px;
     }
+
+    .footer__third-row__alert{
+        font-size: 14px;
+    }
+
+    .footer__third-row__socialMedia__list--item-icon{
+        width: 23px;
+    }
+    
+}
+
+@media only screen and (max-width: 350px) {
+
+    .footer__second-row__form-submit{
+        background: var(--third);
+        padding: 5px 15px;
+    }
+
+    .footer__second-row__form-email{
+        width: 224px;
+        height: 35px;
+        border: none;
+        border-radius: 18px;
+        direction: rtl;
+        padding-right: 8px;    
+    }
+    
 }
