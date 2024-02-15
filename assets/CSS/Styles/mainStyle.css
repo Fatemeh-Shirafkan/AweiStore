@@ -1412,6 +1412,10 @@ transform: translateY(-20px);
     .empty__alert__icon>svg {
         width: 200px;
     }
+
+    .page__title{
+        font-size: 1.8rem;
+    }
     
 }
 

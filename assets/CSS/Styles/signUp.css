@@ -11,13 +11,13 @@
 
 /* REGISTER & LOG IN FORMS styles */
 
-.forms__box{
+.forms__box {
     margin: 0 auto;
     max-width: 1000px;
     margin-bottom: 20px;
 }
 
-.form__separator{
+.form__separator {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -26,25 +26,27 @@
     font-weight: 500;
 }
 
-.form__separator__content{
+.form__separator__content {
     padding: 10px 0;
 }
 
-.form__separator::before{
+.form__separator::before {
     content: "";
     flex: 1 1 auto;
     border-width: 1px;
     border-left-style: solid;
+    border-color: rgba(119,119,119,.2);
 }
 
-.form__separator::after{
+.form__separator::after {
     content: "";
     flex: 1 1 auto;
     border-width: 1px;
     border-left-style: solid;
+    border-color: rgba(119,119,119,.2);
 }
 
-.register__form__username, .register__form__email, .register__form__password{
+.register__form__username, .register__form__email, .register__form__password {
     font-size: 0.95rem;
     color: #333;
     display: flex;
@@ -52,11 +54,11 @@
     margin-bottom: 20px;
 }
 
-.register__form__label--mb{
+.register__form__label--mb {
     margin-bottom: 3px;
 }
 
-.register__form__input{
+.register__form__input {
     padding: 0 15px;
     max-width: 100%;
     width: 100%;
@@ -69,7 +71,7 @@
     border: 1px solid var(--border);
 }
 
-.register__form__submit--style{
+.register__form__submit--style {
     background: var(--third);
     color: var(--bg-color);
     padding: 5px 33px;
@@ -83,17 +85,48 @@
     background: var(--hover);
 }
 
-.privacy-policy--text{
+.privacy-policy--text {
     font-size: 0.9rem;
     text-align: justify;
 }
 
-.privacy-policy--link{
+.privacy-policy--link {
     color: var(--hover);
     font-weight: 700;
     font-size: 1rem;
 }
 
-.privacy-policy--link:hover{
+.privacy-policy--link:hover {
     color: var(--hover);
+}
+
+.forms__box-title {
+    margin-bottom: 20px;
+}
+
+/* Responsive styles */
+
+@media only screen and (max-width: 568px) {
+
+    .form__separator::after{
+        border-left-style: none;
+        border-bottom-style: solid;    
+    }
+    
+    .form__separator::before{
+        border-left-style: none;
+        border-bottom-style: solid;    
+    }
+
+    .form__separator__content{
+        padding: 0 15px;
+    }
+
+    .form__separator{
+        flex: 1 1 100%;
+        flex-direction: row;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
 }
