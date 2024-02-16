@@ -1399,7 +1399,7 @@ transform: translateY(-20px);
         font-size: 14px;
     }
 
-    .footer__third-row__socialMedia__list--item-icon{
+    .footer__third-row__socialMedia__list--item-icon { 
         width: 23px;
     }
 
@@ -1415,6 +1415,10 @@ transform: translateY(-20px);
 
     .page__title{
         font-size: 1.8rem;
+    }
+
+    .banner__box-item {
+        margin-bottom: 25px;
     }
     
 }
