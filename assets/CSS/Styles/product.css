@@ -389,5 +389,29 @@
         direction: rtl;
         margin: 70px 0;
     }
-    
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .writeComment__form__info {
+        display: block;    
+    }
+
+    .writeComment__form__info-email {
+        margin-top: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .writeComment__form__info {
+        gap: 13px;
+    }
+
+    .writeComment {
+        margin-top: 30px;
+    }
+
 }
