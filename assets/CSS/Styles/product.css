@@ -163,6 +163,7 @@
     color: #666;
     position: relative;
     transition: all 0.4s;
+    user-select: none;
 }
 
 .tab__wrapper__list__item__text::after {
