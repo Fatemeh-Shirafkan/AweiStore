@@ -94,7 +94,7 @@ let header = `
 
         <!-- Third row (Header navbar) -->
     <div>
-        <div class="container">
+        <div class="container g">
             <nav class="row">
                 <div class="col"></div>
                 <div class="col-xl-5 dekstopMenu">
@@ -347,7 +347,7 @@ let headerDropDownMenu = document.querySelectorAll('.menu__box__items__dropdown'
 
 let layer = document.querySelector('.layer');
 
-let menu = document.querySelector('#menu-row');
+let menu = document.querySelector('.g');
 let scrollValue = null;
 
 // Open/Close the login nav
