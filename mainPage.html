@@ -27,14 +27,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="swiper mySwiper">
+                    <div class="swiper headerSlider">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide"><img src="./assets/images/slide1.jpg" alt="" loading="lazy"></div>
                             <div class="swiper-slide"><img src="./assets/images/slide2.jpg" alt="" loading="lazy"></div>
                             <div class="swiper-slide"><img src="./assets/images/slide1.jpg" alt="" loading="lazy"></div>
                         </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
                     </div>
                     <div class="swiper-pagination">
                         <span></span>
@@ -58,8 +56,7 @@
                     <div class="line-below-title"></div>
                 </div>
             </div>
-            <div class="row mySwiper" pagination="true" pagination-clickable="true" space-between="30"
-            slides-per-view="3"  id="swiper-container">
+            <div class="row " pagination="true" id="swiper-container">
                 <div class="col ">
                     <div class="categories__card swiper-slide">
                         <div class="categories__card__icon--hover-efct">
@@ -523,6 +520,17 @@
     </section>
 
 
+
+    <script>
+
+        var swiper = new Swiper(".mySwiper", {
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+    </script>
+      
 
     
     <!-- BLURE DARK LAYER -->

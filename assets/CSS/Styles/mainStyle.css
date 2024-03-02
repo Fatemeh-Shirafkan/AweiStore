@@ -627,6 +627,7 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 5px;
 }
 
 .swiper-slide img {
@@ -641,19 +642,10 @@ img{
     margin-right: auto;
 }
 
-.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
-    font-size: 1.8rem;
-    color: red;
-    display: none;
-}
-
-.swiper-button-prev:hover {
-    color: var(--third);
-}
-
 .swiper-pagination {
     position: inherit;
     margin-top: 20px;
+    user-select: none;
 }
 
 .swiper-pagination-bullet {
@@ -664,13 +656,13 @@ img{
 .swiper-pagination-bullet:hover {
     transform: scale(1.6);
     background: transparent;
-    border:1.5px solid black;
+    border: 1.5px solid black;
 }
 
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
     transform: scale(1.6);
     background: transparent;
-    border:1.5px solid black;
+    border: 1.5px solid black;
 }
 
 /* CATEGORIES styles */

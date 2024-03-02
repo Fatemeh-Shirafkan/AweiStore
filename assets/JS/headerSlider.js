@@ -1,15 +1,9 @@
-// Header slider
-
-let swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 30,
+var swiper = new Swiper(".headerSlider", {
     loop: true,
+    centerSlide: 'true',
+    fade: 'true',
+    grabCursor: 'true',
     pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+        el: ".swiper-pagination",
     },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
+});
