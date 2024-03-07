@@ -20,15 +20,13 @@ var swiper = new Swiper(".categoriesSlider", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
-    pagination: {
-        el: ".categories-pagination",
-        clickable: true,
-        // dynamicBullets: true,
-    },
 
     breakpoints: {
         0: {
             slidesPerView: 1,
+        },
+        576: {
+            slidesPerView: 2,
         },
         768: {
             slidesPerView: 5,

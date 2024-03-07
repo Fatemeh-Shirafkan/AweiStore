@@ -752,6 +752,16 @@ img{
     color: var(--hover);
 }
 
+/* CATEGORIES prev & next button styles */
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
+    font-size: 20px;
+    color: #000;
+}
+
+.swiper-button-next, .swiper-button-prev{
+    user-select: none;
+}
+
 /* PRODUCT PREVIEW */
 
 .product-preview {
