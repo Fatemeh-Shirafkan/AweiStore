@@ -794,6 +794,9 @@ img{
 
 .product__card__row {
     padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .product__card {
