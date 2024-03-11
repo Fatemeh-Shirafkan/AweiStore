@@ -45,17 +45,19 @@ var swiper = new Swiper(".categoriesSlider", {
 
 
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 5,
-    spaceBetween: 5,
+    // slidesPerView: 5,
+    // spaceBetween: 10,
     loop: true,
     centerSlide: 'true',
     fade: 'true',
     grabCursor: 'true',
 
-    scrollbar: {
-      el: ".swiper-scrollbar",
-      hide: true,
-    },
+    // scrollbar: {
+    //   el: ".swiper-scrollbar",
+    //   hide: true,
+    //   clickable: true,
+
+    // },
     breakpoints: {
         0: {
             slidesPerView: 1,
@@ -64,7 +66,7 @@ var swiper = new Swiper(".mySwiper", {
             slidesPerView: 2,
         },
         1024: {
-            slidesPerView: 4,
+            slidesPerView: 3,
         },
         1140: {
             slidesPerView: 5,
