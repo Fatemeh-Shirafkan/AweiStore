@@ -114,3 +114,23 @@ img{
     background: var(--hover);
     color: var(--fist);
 }
+
+/* Responsive part */
+
+@media only screen and (max-width: 1200px) {
+
+    .total-price__card__proceed-to-checkout__btn {
+        padding: 7px 25px;
+    }   
+}
+
+@media only screen and (max-width: 576px) {
+
+    .product-name {
+        min-width: 200px;
+    }
+
+    .product-name p{
+        word-wrap: break-word;
+    }  
+}
