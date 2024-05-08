@@ -49,6 +49,10 @@ img{
     border: 1px gray solid;
 }
 
+.product-name p {
+    word-wrap: break-word;
+}
+
 .remove-product{
     padding-right: 0;
 }
@@ -130,7 +134,28 @@ img{
         min-width: 200px;
     }
 
-    .product-name p{
-        word-wrap: break-word;
-    }  
+}
+
+@media only screen and (max-width: 376px) {
+
+    td{
+        padding: 15px 5px;
+    }
+
+    .product-img{
+        display: none;
+    }
+    
+    .product__count{
+        width: 40px;
+    }
+
+    .product-name p {
+        font-size: 13px;
+    }
+
+    .product-price span {
+        font-size: 12px;
+    }
+
 }
